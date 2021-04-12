@@ -1,0 +1,8 @@
+// export const DEFAULT_ERROR = 'DEFAULT_ERROR'
+// export const NETWORK_ERROR = 'NETWORK_ERROR'
+// export const NO_INTERNET_ERROR = 'NO_INTERNET_ERROR'
+// export const TIMEOUT_ERROR = 'TIMEOUT_ERROR'
+// export const SERVER_ERROR = 'SERVER_ERROR'
+// export const UNAUTHORIZED = 'UNAUTHORIZED'
+// export const DATA_ERROR = 'DATA_ERROR'
+// export const FORBIDDEN = 'FORBIDDEN'
