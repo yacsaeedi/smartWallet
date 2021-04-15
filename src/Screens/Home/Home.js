@@ -5,12 +5,12 @@ import styles from "./HomeStyle"
 import { Header, NavBar, MySlider, Mylist } from "../../Components";
 const Home = (props) => {
     return (
-        <View style={[ParentStyle.bg_app, styles.homeWrp]}>
+        <View style={[ParentStyle.wrp]}>
             <Header />
-            <NavBar textNav="Card" number="4" change={"HomeNav"} />
+            <NavBar textNav="Card" number="4" change={"HomeNav"} showIcon={true} />
             <View style={styles.listBox}><MySlider /></View>
-            <NavBar textNav="Last Transaction" number="All" change={"HomeNav"} />
-            <Mylist />
+            <NavBar textNav="Last Transaction" number="All" change={"HomeNav"} showIcon={true} />
+            <Mylist showDate={true} />
         </View>
     )
 }

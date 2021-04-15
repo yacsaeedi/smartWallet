@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
         marginRight: 10,
         justifyContent: "center",
         alignItems: "center"
-    }
+    },
+
 })
 export default styles

@@ -20,7 +20,7 @@ const ParentStyle = StyleSheet.create({
     },
     center_row: {
         justifyContent: "center",
-        alignContent: "center",
+        alignItems: "center",
         flexDirection: "row"
     },
     center_cloumn: {
@@ -54,6 +54,11 @@ const ParentStyle = StyleSheet.create({
     Text_W_M: {
         color: "#FCFDFD",
         fontSize: 14,
+        fontFamily: "medium"
+    },
+    Text_W_U: {
+        color: "#FCFDFD",
+        fontSize: 18,
         fontFamily: "medium"
     },
     Text_W_L: {
@@ -93,7 +98,6 @@ const ParentStyle = StyleSheet.create({
     },
     text_center: {
         textAlign: "center",
-        marginBottom: 4,
     }
     // Text custom style end
 })

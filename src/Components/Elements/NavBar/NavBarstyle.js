@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         width: "100%",
         marginTop: 10,
-        alignItems: "center"
+        alignItems: "center",
     },
     text_darkColor: {
         color: "#8c8c8e",
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     box_size: {
         alignItems: "flex-start",
         justifyContent: "center",
-        flex: 1.4,
+        flex: 1.5,
     },
     iconbox: {
         width: 28,
@@ -73,7 +73,32 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignSelf: "center"
-    }
+    },
+    iconboxheader: {
+        width: 25,
+        height: 25,
+        backgroundColor: "#ccc",
+        borderRadius: 50,
+        backgroundColor: "#282a37",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    boxNav: {
+        marginTop: 6
+    },
+    mrg_rightIcon: {
+        marginRight: 5
+    },
+    iconbox: {
+        width: 25,
+        height: 25,
+        backgroundColor: "#ccc",
+        borderRadius: 50,
+        backgroundColor: "#282a37",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+
 
 })
 export default styles

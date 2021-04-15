@@ -10,10 +10,18 @@ const styles = StyleSheet.create({
     LeftBtn: {
         backgroundColor: '#5fe27c',
         color: "#FCFDFD",
+        textAlign: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "center"
     },
     rightBtn: {
         backgroundColor: "#256CFE",
         color: "#FCFDFD",
+        textAlign: "center",
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "center"
     },
     imageStyle: {
         width: 30,

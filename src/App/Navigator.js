@@ -11,9 +11,11 @@ const Stack = createStackNavigator();
 const TabScreen = () => {
     return (
         <Tab.Navigator>
-            <Tab.Screen options={{ headerShown: false }} name="Cards" component={Cards} />
-            <Tab.Screen options={{ headerShown: false }} name="MoneyBox" component={MoneyBox} />
             <Tab.Screen options={{ headerShown: false }} name="Limits" component={Limits} />
+            <Tab.Screen options={{ headerShown: false }} name="MoneyBox" component={MoneyBox} />
+            <Tab.Screen options={{ headerShown: false }} name="Statistic" component={Statistic} />
+            <Tab.Screen options={{ headerShown: false }} name="Home" component={Home} />
+            <Tab.Screen options={{ headerShown: false }} name="Cards" component={Cards} />
         </Tab.Navigator>
     )
 }
@@ -28,7 +30,6 @@ export default Navigator = () => {
                 <Stack.Screen options={{ headerShown: false, tabBarVisible: false }} name="MoneyBox" component={MoneyBox} />
                 <Stack.Screen options={{ headerShown: false, tabBarVisible: false }} name="Limits" component={Limits} />
                 <Stack.Screen options={{ headerShown: false, tabBarVisible: false }} name="Statistic" component={Statistic} />
-
             </Stack.Navigator>
         </NavigationContainer>
     )

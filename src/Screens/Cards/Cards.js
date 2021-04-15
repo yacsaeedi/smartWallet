@@ -7,20 +7,20 @@ import Data from "../../Constants/Data"
 
 const Cards = (props) => {
     return (
-        <View style={[ParentStyle.bg_app, styles.cardWrp]}>
+        <View style={[ParentStyle.wrp]}>
             <NavBar textNav="Card" number="4" change={"navCenter"} />
             <ScrollView>
                 <SwpList
                     navTitle="Active"
                     navnumber=""
-                    navChange="HomeNav"
+                    navChange="ListHeader"
                     IconState={false}
                     list={Data.list}
                 />
                 <SwpList
                     navTitle="Hidden"
                     navnumber=""
-                    navChange="HomeNav"
+                    navChange="ListHeader"
                     IconState={false}
                     list={Data.list}
                 />
