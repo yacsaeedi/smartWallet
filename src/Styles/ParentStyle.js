@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Theme, Color } from '../Constants/Color';
+import { Theme } from '../Constants';
 const ParentStyle = StyleSheet.create({
     ///// global
     wrp: {
@@ -74,7 +74,7 @@ const ParentStyle = StyleSheet.create({
     Text_W_B: {
         color: "#FCFDFD",
         fontSize: 25,
-        fontFamily: "Bold"
+        fontFamily: Theme.Fonts.bold
     },
     Text_C_l: {
         color: "#8c8c8e",

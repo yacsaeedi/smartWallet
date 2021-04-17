@@ -8,7 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "postinstall": "npx patch-package"
+    "postinstall": "npx patch-package",
+    "build:web": "expo build:web",
+    "build:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && gradlew assembleDebug"
   },
   "rnpm": {
     "assets": [
@@ -26,6 +28,7 @@
     "react": "17.0.1",
     "react-iconly": "^2.2.2",
     "react-native": "0.64.0",
+    "react-native-cli": "^2.0.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-pie": "^1.1.2",
     "react-native-reanimated": "^2.1.0",

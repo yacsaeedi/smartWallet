@@ -8,7 +8,6 @@ import { enableScreens } from 'react-native-screens';
 enableScreens();
 LogBox.ignoreAllLogs();
 const App = (props) => {
-
   return (
     <>
       <Navigator />

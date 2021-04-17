@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import NavBar from "../NavBar"
 const LimitsList = (props) => {
     const { showDate, showModal } = props
-    const [modalVisible, setModalVisible] = useState(true);
+    const [modalVisible, setModalVisible] = useState(false);
     const [values, setValues] = useState(
         {
             total: "",
