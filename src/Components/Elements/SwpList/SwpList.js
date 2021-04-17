@@ -4,9 +4,10 @@ import { NavBar, SwipeoutBtn } from "../../../Components"
 import ParentStyle from "../../../Styles";
 import styles from "./SwpListStyle";
 // import Data from "../../Constants/Data"
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const SwpList = (props) => {
-    const { navTitle, navnumber, navChange, IconState, list } = props
+    const { navTitle, navnumber, navChange, IconState, list, iconName } = props
     return (
         <>
             <NavBar textNav={navTitle} number={navnumber} change={navChange} showIcon={IconState} />
@@ -15,16 +16,15 @@ const SwpList = (props) => {
                     data={list}
                     renderItem={(item) => {
                         return (
-                            <SwipeoutBtn item={item} />
+                            <SwipeoutBtn item={item} iconName={item.icon} />
                         )
                     }}
                     ListFooterComponent={() => {
                         return (
                             <View style={[styles.footerList, ParentStyle.center_row]}>
                                 <View style={[ParentStyle.center_row]}>
-                                    <Text style={[ParentStyle.Text_W_M]}>+</Text>
-                                    {/* <Icon/> */}
-                                    <Text style={[ParentStyle.Text_W_M]}> ADD CARD</Text>
+                                    <Icon name="plus" size={10} color="#8c8c8e" />
+                                    <Text style={[ParentStyle.Text_C_M]}> ADD CARD</Text>
                                 </View>
                             </View>
                         )

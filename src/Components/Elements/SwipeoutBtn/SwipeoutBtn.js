@@ -1,11 +1,11 @@
-import React, { useState, useEffect, } from 'react';
-import { TouchableOpacity, Text, View, Image } from 'react-native';
+import React from 'react';
+import { Text, View, Pressable } from 'react-native';
 import ParentStyle from "../../../Styles";
 import styles from "./SwipeoutBtnStyle";
 import Swipeout from 'rc-swipeout';
+import Icon from 'react-native-vector-icons/FontAwesome';
 const SwipeoutBtn = (props) => {
     const { item } = props.item
-    console.log("item", item);
     return (
         <Swipeout
             style={[styles.btnBox]}
@@ -30,10 +30,11 @@ const SwipeoutBtn = (props) => {
         // }
         // onClose={() => console.log('close')}
         >
-            <View style={[styles.btnBox, ParentStyle.row]}>
+            <Pressable
+                style={[styles.btnBox, ParentStyle.row]}>
                 <View style={[ParentStyle.row, styles.rightContent]}>
                     <View style={[ParentStyle.center_row, styles.imageBox]} >
-                        <Image source={item.img} style={styles.imageStyle} />
+                        <Icon name={item.icon} size={17} color="#FCFDFD" style={styles.imageStyle} />
                     </View>
                     <View style={[ParentStyle.center_cloumn, styles.imageBox]} >
                         <Text style={ParentStyle.Text_W_M}>CARD NUMBER</Text>
@@ -43,7 +44,7 @@ const SwipeoutBtn = (props) => {
                 <View style={[ParentStyle.center_row, styles.leftContent]}>
                     <Text style={ParentStyle.Text_W_L}>{item.number}</Text>
                 </View>
-            </View>
+            </Pressable>
         </Swipeout>
 
     )

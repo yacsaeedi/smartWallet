@@ -4,6 +4,7 @@ import ParentStyle from '../../Styles';
 import { NavBar } from "../../Components"
 import styles from './MoneyBoxStyle';
 import Data from '../../Constants/Data';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const MoneyBox = (props) => {
     return (
         <View style={ParentStyle.wrp}>
@@ -23,7 +24,7 @@ const MoneyBox = (props) => {
 
                                 <View style={[styles.busyBox, { backgroundColor: item.busy == "100%" ? "#37614b" : "#256CFE", width: item.busy }]}>
                                     {item.busy == "100%" ?
-                                        <Text style={ParentStyle.Text_W_M}>Congratulations! Goal Archive</Text>
+                                        <Text style={ParentStyle.Text_W_M}><Icon name="party-popper" szie={12} color="orange" />  Congratulations! Goal Archive</Text>
                                         :
                                         null
                                     }

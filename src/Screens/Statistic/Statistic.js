@@ -3,12 +3,13 @@ import { TouchableOpacity, Text, View } from 'react-native';
 import { Header, NavBar, MySlider, Mylist } from "../../Components";
 import styles from "./StatisticStyle";
 import ParentStyle from "../../Styles";
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import Pie from 'react-native-pie';
 const Statistic = (props) => {
     return (
         <View style={[ParentStyle.wrp]}>
-            <NavBar textNav="Statistic" />
+            <NavBar textNav="Statistic" iconNameLeft="calendar-o" iconNameRight="chevron-left" />
             <NavBar textNav="December" centerTitle={true} change="HomeNav" />
             <View style={styles.container}>
                 <View
@@ -46,7 +47,8 @@ const Statistic = (props) => {
                         strokeCap={'butt'}
                     />
                     <View style={styles.gauge}>
-                        <Text style={[styles.gaugeText, ParentStyle.Text_C_M]}>@</Text>
+                        <Icon name="shopping-cart" size={14} color="#8c8c8e" />
+                        {/* <Text style={[styles.gaugeText, ParentStyle.Text_C_M]}>@</Text> */}
                         <Text style={[styles.gaugeText, ParentStyle.Text_C_M]}>Product</Text>
                         <Text style={[styles.gaugeText, ParentStyle.Text_W_M]}>-$ 500,00</Text>
                     </View>

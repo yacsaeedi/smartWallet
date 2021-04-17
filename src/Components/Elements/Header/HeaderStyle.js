@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         backgroundColor: "red",
         borderRadius: 50,
         position: "absolute",
-        top: 2,
+        top: 0,
         right: 3,
         zIndex: 100
     }

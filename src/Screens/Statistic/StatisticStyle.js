@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     gauge: {
         position: 'absolute',
         width: 70,
-        height: 60,
+        height: 50,
         alignItems: 'center',
         justifyContent: "space-around",
         bottom: 70,

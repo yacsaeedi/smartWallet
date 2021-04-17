@@ -75,13 +75,14 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     },
     iconboxheader: {
-        width: 25,
-        height: 25,
+        width: 28,
+        height: 28,
         backgroundColor: "#ccc",
         borderRadius: 50,
         backgroundColor: "#282a37",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        marginTop: 5
     },
     boxNav: {
         marginTop: 6
@@ -90,8 +91,8 @@ const styles = StyleSheet.create({
         marginRight: 5
     },
     iconbox: {
-        width: 25,
-        height: 25,
+        width: 28,
+        height: 28,
         backgroundColor: "#ccc",
         borderRadius: 50,
         backgroundColor: "#282a37",
