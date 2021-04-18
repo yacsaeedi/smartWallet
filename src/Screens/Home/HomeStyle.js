@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import { Color } from "../../Constants"
 const styles = StyleSheet.create({
     homeWrp: {
         flex: 1,
-        backgroundColor: "#17191F"
+        backgroundColor: Color.black
     },
     listBox: {
         paddingLeft: 15,

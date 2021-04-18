@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Fonts, Theme } from "../../../Constants/Theme"
+import { Fonts, Theme, Color } from "../../../Constants"
 const styles = StyleSheet.create({
     cardStyle: {
         height: 260,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
     tranBox: {
         paddingVertical: 10,
-        borderBottomColor: "#282a37",
+        borderBottomColor: Color.bgBox,
         borderBottomWidth: .9
     },
     iconbox: {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         height: 30,
         backgroundColor: "#ccc",
         borderRadius: 50,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         marginRight: 10,
         justifyContent: "center",
         alignItems: "center"

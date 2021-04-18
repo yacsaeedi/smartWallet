@@ -1,27 +1,32 @@
 import { StyleSheet } from "react-native";
+import { Color } from "../../../Constants"
 const styles = StyleSheet.create({
     btnBox: {
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         width: "100%",
         height: 60,
         borderRadius: 8,
         marginBottom: 8
     },
     LeftBtn: {
-        backgroundColor: '#5fe27c',
-        color: "#FCFDFD",
+        backgroundColor: Color.green,
+        color: Color.white,
         textAlign: "center",
         alignItems: "center",
         justifyContent: "center",
-        alignSelf: "center"
+        alignSelf: "center",
+        marginBottom: 8
+
     },
     rightBtn: {
-        backgroundColor: "#256CFE",
-        color: "#FCFDFD",
+        backgroundColor: Color.blue,
+        color: Color.white,
         textAlign: "center",
         alignItems: "center",
         justifyContent: "center",
-        alignSelf: "center"
+        alignSelf: "center",
+        marginBottom: 8
+
     },
     imageStyle: {
         width: 30,

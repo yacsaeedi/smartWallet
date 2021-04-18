@@ -1,22 +1,22 @@
 import { StyleSheet } from "react-native";
-import { Theme } from '../Constants';
+import { Theme, Color } from '../Constants';
 const ParentStyle = StyleSheet.create({
     ///// global
     wrp: {
         flex: 1,
-        backgroundColor: "#17191F"
+        backgroundColor: Color.black
     },
     bg_app: {
-        backgroundColor: "#17191F"
+        backgroundColor: Color.black
     },
     bg_Blue: {
-        backgroundColor: "#256CFE"
+        backgroundColor: Color.blue
     },
     color_W: {
-        color: "#FCFDFD"
+        color: Color.white
     },
     color_B: {
-        color: "#8c8c8e",
+        color: Color.lightTxt,
     },
     center_row: {
         justifyContent: "center",
@@ -52,32 +52,32 @@ const ParentStyle = StyleSheet.create({
     },
     // Text custom style start
     Text_W_M: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 14,
         fontFamily: "medium"
     },
     Text_W_U: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 18,
         fontFamily: "medium"
     },
     Text_W_L: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 20,
         fontFamily: "large"
     },
     Text_C_M: {
-        color: "#8c8c8e",
+        color: Color.lightTxt,
         fontSize: 14,
         fontFamily: "medium"
     },
     Text_W_B: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 25,
         fontFamily: Theme.Fonts.bold
     },
     Text_C_l: {
-        color: "#8c8c8e",
+        color: Color.lightTxt,
         fontSize: 12,
         fontFamily: 'ulLight'
     },
@@ -87,12 +87,12 @@ const ParentStyle = StyleSheet.create({
         fontFamily: 'ulLight'
     },
     Text_W_R: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 10,
         fontFamily: 'regular'
     },
     Text_W_S: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 12,
         fontFamily: 'light'
     },

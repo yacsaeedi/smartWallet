@@ -1,10 +1,10 @@
-import React, { useState, useEffect, } from 'react';
-import { TouchableOpacity, Text, View } from 'react-native';
-import { Header, NavBar, MySlider, Mylist } from "../../Components";
+import React from 'react';
+import { Text, View } from 'react-native';
+import { NavBar, Mylist } from "../../Components";
 import styles from "./StatisticStyle";
 import ParentStyle from "../../Styles";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-
+import { Color } from "../../Constants"
 import Pie from 'react-native-pie';
 const Statistic = (props) => {
     return (
@@ -25,30 +25,29 @@ const Statistic = (props) => {
                         sections={[
                             {
                                 percentage: 30,
-                                color: "#256CFE",
+                                color: Color.blue,
                             },
                             {
                                 percentage: 10,
-                                color: "#282a37",
+                                color: Color.bgBox,
                             },
                             {
                                 percentage: 15,
-                                color: "#323441",
+                                color: Color.chartBg,
                             },
                             {
                                 percentage: 25,
-                                color: "#282a37",
+                                color: Color.bgBox,
                             },
                             {
                                 percentage: 20,
-                                color: "#323441",
+                                color: Color.chartBg,
                             },
                         ]}
                         strokeCap={'butt'}
                     />
                     <View style={styles.gauge}>
-                        <Icon name="shopping-cart" size={14} color="#8c8c8e" />
-                        {/* <Text style={[styles.gaugeText, ParentStyle.Text_C_M]}>@</Text> */}
+                        <Icon name="shopping-cart" size={14} color={Color.lightTxt} />
                         <Text style={[styles.gaugeText, ParentStyle.Text_C_M]}>Product</Text>
                         <Text style={[styles.gaugeText, ParentStyle.Text_W_M]}>-$ 500,00</Text>
                     </View>

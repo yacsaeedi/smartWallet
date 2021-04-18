@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Fonts, Theme } from "../../../Constants/Theme"
+import { Fonts, Theme } from "../../../Constants"
 const styles = StyleSheet.create({
     HeaderWrp: {
         paddingHorizontal: 20,

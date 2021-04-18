@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, View, FlatList } from 'react-native';
 import ParentStyle from '../../Styles';
 import { NavBar } from "../../Components"
 import styles from './MoneyBoxStyle';
-import Data from '../../Constants/Data';
+import { Data, Color } from '../../Constants';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 const MoneyBox = (props) => {
     return (
@@ -22,7 +22,7 @@ const MoneyBox = (props) => {
                                     </View>
                                 </View>
 
-                                <View style={[styles.busyBox, { backgroundColor: item.busy == "100%" ? "#37614b" : "#256CFE", width: item.busy }]}>
+                                <View style={[styles.busyBox, { backgroundColor: item.busy == "100%" ? Color.green : Color.blue, width: item.busy }]}>
                                     {item.busy == "100%" ?
                                         <Text style={ParentStyle.Text_W_M}><Icon name="party-popper" szie={12} color="orange" />  Congratulations! Goal Archive</Text>
                                         :

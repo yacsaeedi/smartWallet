@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home, Cards, MoneyBox, Limits, Statistic } from "../Screens"
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import { Color } from "../Constants"
 //Stack Names 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -13,16 +13,16 @@ const TabScreen = () => {
     return (
         <Tab.Navigator
             tabBarOptions={{
-                activeTintColor: "#FCFDFD",
-                inactiveTintColor: "#8c8c8e",
+                activeTintColor: Color.white,
+                inactiveTintColor: Color.lightTxt,
                 labelStyle: {
                     fontSize: 12,
                     marginBottom: 10,
                 },
                 style: {
                     borderTopWidth: 0.5,
-                    borderTopColor: "#292c35",
-                    backgroundColor: "#17191F",
+                    borderTopColor: Color.border,
+                    backgroundColor: Color.black,
                     elevation: 0,
                     width: '100%',
                     height: 60,

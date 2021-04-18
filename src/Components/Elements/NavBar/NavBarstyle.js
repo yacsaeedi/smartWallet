@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Fonts, Theme } from "../../../Constants/Theme"
+import { Color } from "../../../Constants"
 const styles = StyleSheet.create({
     navWrp: {
         paddingVertical: 10,
@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     text_darkColor: {
-        color: "#8c8c8e",
+        color: Color.lightTxt,
         fontSize: 12,
         fontFamily: 'ulLight'
     },
     text_lightColor: {
-        color: "#FCFDFD",
+        color: Color.white,
         fontSize: 14,
         fontFamily: 'medium'
     },
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         height: 28,
         backgroundColor: "#ccc",
         borderRadius: 50,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         justifyContent: "center",
         alignItems: "center",
         alignSelf: "center"
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
         height: 28,
         backgroundColor: "#ccc",
         borderRadius: 50,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         justifyContent: "center",
         alignItems: "center",
         marginTop: 5
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         height: 28,
         backgroundColor: "#ccc",
         borderRadius: 50,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         justifyContent: "center",
         alignItems: "center"
     },

@@ -3,7 +3,7 @@ import { View, ScrollView } from 'react-native';
 import { NavBar, SwpList } from "../../Components"
 import ParentStyle from "../../Styles";
 import styles from "./CardsStyle";
-import Data from "../../Constants/Data"
+import { Data } from "../../Constants"
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Cards = (props) => {

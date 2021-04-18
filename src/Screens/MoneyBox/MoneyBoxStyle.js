@@ -1,7 +1,8 @@
 import { StyleSheet } from "react-native";
+import { Color } from "../../Constants"
 const styles = StyleSheet.create({
     btnBox: {
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         width: "100%",
         height: 60,
         borderRadius: 8,
@@ -30,12 +31,11 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     busyBox: {
-        // backgroundColor: "#256CFE",
         position: 'absolute',
         height: "100%",
         borderRadius: 8,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     }
 })
 export default styles

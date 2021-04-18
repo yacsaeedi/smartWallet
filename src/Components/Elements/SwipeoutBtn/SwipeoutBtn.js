@@ -4,6 +4,7 @@ import ParentStyle from "../../../Styles";
 import styles from "./SwipeoutBtnStyle";
 import Swipeout from 'rc-swipeout';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Color } from "../../../Constants"
 const SwipeoutBtn = (props) => {
     const { item } = props.item
     return (
@@ -34,7 +35,7 @@ const SwipeoutBtn = (props) => {
                 style={[styles.btnBox, ParentStyle.row]}>
                 <View style={[ParentStyle.row, styles.rightContent]}>
                     <View style={[ParentStyle.center_row, styles.imageBox]} >
-                        <Icon name={item.icon} size={17} color="#FCFDFD" style={styles.imageStyle} />
+                        <Icon name={item.icon} size={17} color={Color.white} style={styles.imageStyle} />
                     </View>
                     <View style={[ParentStyle.center_cloumn, styles.imageBox]} >
                         <Text style={ParentStyle.Text_W_M}>CARD NUMBER</Text>

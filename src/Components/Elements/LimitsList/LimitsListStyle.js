@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
-import { Fonts, Theme } from "../../../Constants/Theme"
+import { Fonts, Theme, Color } from "../../../Constants"
 const styles = StyleSheet.create({
     box: {
         width: "48%",
         height: 160,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         margin: "1%",
         borderRadius: 8,
         padding: 15,
@@ -20,20 +20,20 @@ const styles = StyleSheet.create({
         height: 30,
         backgroundColor: "#ccc",
         borderRadius: 50,
-        backgroundColor: "#3d3f4c",
+        backgroundColor: Color.BgIcon,
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 15
     },
     busyBox: {
-        backgroundColor: "#3d3f4c",
+        backgroundColor: Color.BgIcon,
         width: "100%",
         height: 3.5,
         borderRadius: 8,
         overflow: 'hidden'
     },
     busyValue: {
-        backgroundColor: "#256CFE",
+        backgroundColor: Color.blue,
         height: "100%"
     },
 
@@ -53,11 +53,9 @@ const styles = StyleSheet.create({
     },
     modalView: {
         margin: 20,
-        backgroundColor: "#18191e",
         borderTopEndRadius: 20,
         borderTopStartRadius: 20,
         height: "35%",
-        // padding: 35,
         alignItems: "center",
         shadowColor: "#000",
         shadowOffset: {
@@ -69,18 +67,13 @@ const styles = StyleSheet.create({
         elevation: 5,
         position: 'absolute',
         bottom: -20,
-        width: "100%"
+        width: "100%",
+        backgroundColor: Color.black
     },
     button: {
         borderRadius: 20,
         padding: 10,
         elevation: 2
-    },
-    buttonOpen: {
-        backgroundColor: "#F194FF",
-    },
-    buttonClose: {
-        backgroundColor: "#2196F3",
     },
     textStyle: {
         color: "white",
@@ -100,7 +93,7 @@ const styles = StyleSheet.create({
     btnTop: {
         alignSelf: 'center',
         height: 3,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         width: "30%",
         marginTop: 5,
         borderRadius: 50
@@ -113,14 +106,14 @@ const styles = StyleSheet.create({
     input: {
         width: "100%",
         padding: 5,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         borderRadius: 8,
         marginBottom: 10
     },
     saveChange: {
         width: "100%",
         padding: 10,
-        backgroundColor: "#256CFE",
+        backgroundColor: Color.blue,
         borderRadius: 8,
         marginBottom: 10
     }

@@ -1,4 +1,4 @@
-import Images from './Images';
+import Color from "../Constants/Color"
 export default {
     list: [
         {
@@ -7,28 +7,28 @@ export default {
             number: "$ 100.00",
             job: "freelance",
             cNumber: "**** 8658",
-            bgColor: "#256CFE"
+            bgColor: Color.blue
         }, {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 300.00",
             job: "freelance",
             cNumber: "**** 8757",
-            bgColor: "#282a37"
+            bgColor: Color.bgBox
         }, {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 900.00",
             job: "freelance",
             cNumber: "**** 2136",
-            bgColor: "#256CFE"
+            bgColor: Color.blue
         }, {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 400.00",
             job: "freelance",
             cNumber: "**** 7767",
-            bgColor: "#282a37"
+            bgColor: Color.bgBox
         },
     ],
     listCard: [
@@ -37,25 +37,25 @@ export default {
             number: "$ 100.00",
             job: "freelance",
             cNumber: "**** 8658",
-            bgColor: "#256CFE"
+            bgColor: Color.blue
         }, {
             icon: "cc-mastercard",
             number: "$ 300.00",
             job: "freelance",
             cNumber: "**** 8757",
-            bgColor: "#282a37"
+            bgColor: Color.bgBox
         }, {
             icon: "cc-visa",
             number: "$ 900.00",
             job: "freelance",
             cNumber: "**** 2136",
-            bgColor: "#256CFE"
+            bgColor: Color.blue
         }, {
             icon: "cc-mastercard",
             number: "$ 400.00",
             job: "freelance",
             cNumber: "**** 7767",
-            bgColor: "#282a37"
+            bgColor: Color.bgBox
         },
     ],
     listInfo: [

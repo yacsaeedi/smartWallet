@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, FlatList, Modal, Pressable, TextInput, KeyboardAvoidingView, ScrollView } from 'react-native';
 import styles from "./LimitsListStyle";
 import ParentStyle from "../../../Styles"
-import Data from "../../../Constants/Data";
+import { Data, Color } from "../../../Constants";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import NavBar from "../NavBar"
 const LimitsList = (props) => {
@@ -50,7 +50,7 @@ const LimitsList = (props) => {
                         >
                             <View style={styles.content}>
                                 <View style={styles.iconboxheader} >
-                                    <Icon name={item.icon} size={14} color="#8c8c8e" />
+                                    <Icon name={item.icon} size={14} color={Color.lightTxt} />
                                 </View>
                                 <Text style={[ParentStyle.Text_W_U]}>{item.title}</Text>
                                 <Text style={ParentStyle.Text_C_l}>{item.price}/{values.total}
@@ -84,7 +84,7 @@ const LimitsList = (props) => {
                         style={styles.centeredView1}>
                         <View style={[styles.modalView]}>
                             <View style={styles.btnTop}>
-                                <Icon />
+
                             </View>
                             <View style={styles.modalHeader}>
                                 <NavBar textNav={values.title} change={"HomeNav"} showIcon={false} />

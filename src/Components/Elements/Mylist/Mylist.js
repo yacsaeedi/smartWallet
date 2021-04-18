@@ -3,7 +3,7 @@ import { TouchableOpacity, Text, View, Image, FlatList, Pressable } from 'react-
 
 import styles from "./MylistStyle";
 import ParentStyle from "../../../Styles";
-import Data from "../../../Constants/Data";
+import { Data, Color } from "../../../Constants";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Mylist = (props) => {
@@ -18,7 +18,7 @@ const Mylist = (props) => {
                         [ParentStyle.between_row, ParentStyle.marginWrp_H, styles.tranBox]}>
                         <View style={[ParentStyle.center_row]}>
                             <View style={styles.iconbox} >
-                                <Icon name={item.icon} size={14} color="#8c8c8e" />
+                                <Icon name={item.icon} size={14} color={Color.lightTxt} />
                             </View>
                             <View style={ParentStyle.center_cloumn}>
                                 <Text style={ParentStyle.Text_W_M}>{item.title}</Text>

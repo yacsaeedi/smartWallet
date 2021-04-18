@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Color } from "../../Constants"
 const styles = StyleSheet.create({
     limitsBox: {
         flexDirection: "row",
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
     input: {
         width: "100%",
         padding: 5,
-        backgroundColor: "#282a37",
+        backgroundColor: Color.bgBox,
         borderRadius: 8,
         marginBottom: 10
     },

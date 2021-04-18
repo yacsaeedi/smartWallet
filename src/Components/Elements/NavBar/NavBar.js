@@ -3,6 +3,7 @@ import { Text, View, Pressable } from 'react-native';
 import styles from "./NavBarstyle";
 import ParentStyle from "../../../Styles/ParentStyle"
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Color } from "../../../Constants"
 const NavBar = (props) => {
     const { number, textNav, change, showIcon, centerTitle, iconName, iconNameRight, iconNameLeft } = props
     const [Change, setChange] = useState(change)
@@ -17,7 +18,7 @@ const NavBar = (props) => {
                         {showIcon ?
                             <View style={[ParentStyle.center_row, styles.BoxNav]}>
                                 <Text style={[ParentStyle.Text_C_l, ParentStyle.text_center, styles.mrg_rightIcon]}>{number}</Text>
-                                <Icon name="angle-right" size={17} color="#8c8c8e" />
+                                <Icon name="angle-right" size={17} color={Color.lightTxt} />
                             </View>
                             :
                             null
@@ -29,7 +30,7 @@ const NavBar = (props) => {
             return (
                 <View style={[styles.navWrp, ParentStyle.paddingWrp_H, ParentStyle.between_row]}>
                     <View style={styles.titleBox_nav2}>
-                        <Icon name={iconNameLeft} size={17} color="#FCFDFD" />
+                        <Icon name={iconNameLeft} size={17} color={Color.white} />
 
                         {/* <Text style={[ParentStyle.Text_C_l, ParentStyle.text_center]}>@</Text> */}
                     </View>
@@ -54,7 +55,7 @@ const NavBar = (props) => {
                     </View>
                     <View style={styles.titleBox}>
                         <Pressable style={styles.iconboxheader} >
-                            <Icon name="plus" size={13} color="#FCFDFD" />
+                            <Icon name="plus" size={13} color={Color.white} />
                         </Pressable>
                     </View>
                 </View>
@@ -63,12 +64,12 @@ const NavBar = (props) => {
             return (
                 <View style={[styles.navWrp, ParentStyle.paddingWrp_H, ParentStyle.between_row]}>
                     <Pressable style={[styles.titleBox_nav2]}>
-                        <Icon name={iconNameRight} size={17} color="#FCFDFD" />
+                        <Icon name={iconNameRight} size={17} color={Color.white} />
                     </Pressable>
                     <View style={[styles.box_size, ParentStyle.between_row]}>
                         <Text style={[ParentStyle.Text_W_L, ParentStyle.text_center]}>{textNav}</Text>
                         <Pressable style={styles.iconbox} >
-                            <Icon name={iconNameLeft} size={13} color="#FCFDFD" />
+                            <Icon name={iconNameLeft} size={13} color={Color.white} />
                         </Pressable>
                     </View>
                 </View>
