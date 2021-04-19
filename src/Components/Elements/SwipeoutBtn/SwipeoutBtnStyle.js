@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         marginBottom: 8
     },
     LeftBtn: {
-        backgroundColor: Color.green,
+        backgroundColor: Color.lightGreen,
         color: Color.white,
         textAlign: "center",
         alignItems: "center",

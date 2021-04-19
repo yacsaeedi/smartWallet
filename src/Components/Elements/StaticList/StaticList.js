@@ -1,12 +1,12 @@
 import React, { useState, useEffect, } from 'react';
 import { TouchableOpacity, Text, View, Image, FlatList, Pressable } from 'react-native';
 
-import styles from "./MylistStyle";
+import styles from "./StaticListStyle";
 import ParentStyle from "../../../Styles";
 import { Data, Color } from "../../../Constants";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const Mylist = (props) => {
+const StaticList = (props) => {
     const { showDate, list } = props
     return (
         <FlatList
@@ -30,8 +30,11 @@ const Mylist = (props) => {
                             </View>
                         </View>
                         <View style={ParentStyle.center_row}>
-                            <Text style={ParentStyle.Text_W_M, { color: item.noti == "+" ? Color.lightGreen : Color.white }}>{item.noti}</Text>
-                            <Text style={ParentStyle.Text_W_M, { color: item.noti == "+" ? Color.lightGreen : Color.white }}>{item.price}</Text>
+                            <Text style={ParentStyle.Text_W_M}>{item.noti}</Text>
+                            <Text style={ParentStyle.Text_W_M}>{item.price}</Text>
+                            <Text style={[ParentStyle.Text_C_R]}>/</Text>
+                            <Text style={[ParentStyle.Text_C_R, { marginTop: 2 }]}>{item.val}</Text>
+
                         </View>
                     </Pressable>
                 )
@@ -39,4 +42,4 @@ const Mylist = (props) => {
         />
     )
 }
-export default Mylist
+export default StaticList

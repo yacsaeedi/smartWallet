@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     bdgStyle: {
         width: 7,
         height: 7,
-        backgroundColor: "red",
+        backgroundColor: "#e55e5f",
         borderRadius: 50,
         position: "absolute",
         top: 0,

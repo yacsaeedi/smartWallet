@@ -61,44 +61,103 @@ export default {
     listInfo: [
         {
             icon: "shopping-cart",
-            price: "-$ 100.00",
+            noti: "-",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "long-arrow-alt-down",
-            price: "-$ 100.00",
+            noti: "+",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "utensils",
-            price: "-$ 100.00",
+            noti: "-",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "tshirt",
-            price: "-$ 100.00",
+            noti: "-",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "heart",
-            price: "-$ 100.00",
+            noti: "+",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "arrows-alt-v",
-            price: "-$ 100.00",
+            price: "$ 100.00",
+            noti: "-",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "cloud",
-            price: "-$ 100.00",
+            noti: "+",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
         }, {
             icon: "car-side",
-            price: "-$ 100.00",
+            noti: "-",
+            price: "$ 100.00",
             title: "freelance",
             date: "10 Dec, 10:30"
+        },
+    ],
+    statisticList: [
+        {
+            icon: "shopping-cart",
+            val: "25%",
+            noti: "-",
+            price: "$ 100.00",
+            title: "freelance",
+        }, {
+            icon: "long-arrow-alt-down",
+            val: "22%",
+            noti: "+",
+            price: "$ 100.00",
+            title: "freelance",
+        }, {
+            icon: "utensils",
+            val: "15%",
+            noti: "-",
+            price: "$ 100.00",
+            title: "freelance",
+        }, {
+            icon: "tshirt",
+            val: "75%",
+            noti: "-",
+            price: "$ 100.00",
+            title: "freelance",
+        }, {
+            icon: "heart",
+            val: "20%",
+            noti: "+",
+            price: "$ 100.00",
+            title: "freelance",
+        }, {
+            icon: "arrows-alt-v",
+            val: "95%",
+            price: "$ 100.00",
+            noti: "-",
+            title: "freelance",
+        }, {
+            icon: "cloud",
+            val: "12%",
+            noti: "+",
+            price: "$ 100.00",
+            title: "freelance",
+        }, {
+            icon: "car-side",
+            val: "91%",
+            noti: "-",
+            price: "$ 100.00",
+            title: "freelance",
         },
     ],
     planList: [
