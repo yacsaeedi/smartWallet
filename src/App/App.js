@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { View, StatusBar, LogBox } from "react-native";
-import Navigator from "./Navigator"
+import React from 'react';
+import {LogBox} from 'react-native';
+import {enableScreens} from 'react-native-screens';
 
-import { enableScreens } from 'react-native-screens';
+import Navigator from './Navigator';
 
 enableScreens();
 LogBox.ignoreAllLogs();
-const App = (props) => {
-  return (
-    <>
-      <Navigator />
-    </>
-  )
+
+const App = () => {
+  return <Navigator />;
 };
+
 export default App;
