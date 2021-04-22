@@ -6,7 +6,7 @@ import Swipeout from 'rc-swipeout';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Color } from "../../../Constants"
 const SwipeoutBtn = (props) => {
-    const { item } = props.item
+    const { item } = props.item;
     return (
         <Swipeout
             style={[styles.btnBox]}

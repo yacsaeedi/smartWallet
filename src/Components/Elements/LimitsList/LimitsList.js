@@ -38,7 +38,9 @@ const LimitsList = (props) => {
                 showsHorizontalScrollIndicator={false}
                 renderItem={({ item, index }) => {
                     return (
-                        <Pressable style={styles.box}
+                        <Pressable
+                            key={index}
+                            style={styles.box}
                             onPress={() => {
                                 setValues({
                                     total: item.total,

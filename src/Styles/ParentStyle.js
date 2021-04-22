@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {Theme, Color} from '../Constants';
+import { StyleSheet } from 'react-native';
+import { Theme, Color } from '../Constants';
 const ParentStyle = StyleSheet.create({
   ///// global
   wrp: {
@@ -79,7 +79,7 @@ const ParentStyle = StyleSheet.create({
   Text_C_l: {
     color: Color.lightTxt,
     fontSize: 12,
-    fontFamily: 'ulLight',
+    fontFamily: 'ulLight'
   },
   Text_C_R: {
     color: '#b6b7ba',

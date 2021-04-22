@@ -14,8 +14,10 @@ const StaticList = (props) => {
             showsHorizontalScrollIndicator={false}
             renderItem={({ item, index }) => {
                 return (
-                    <Pressable style={
-                        [ParentStyle.between_row, ParentStyle.marginWrp_H, styles.tranBox]}>
+                    <Pressable
+                        key={index}
+                        style={
+                            [ParentStyle.between_row, ParentStyle.marginWrp_H, styles.tranBox]}>
                         <View style={[ParentStyle.center_row]}>
                             <View style={styles.iconbox} >
                                 <Icon name={item.icon} size={14} color={Color.lightTxt} />

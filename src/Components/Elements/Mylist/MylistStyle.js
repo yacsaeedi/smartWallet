@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: .9
     },
     iconbox: {
-        width: 30,
-        height: 30,
+        width: 33,
+        height: 33,
         backgroundColor: "#ccc",
         borderRadius: 50,
         backgroundColor: Color.bgBox,

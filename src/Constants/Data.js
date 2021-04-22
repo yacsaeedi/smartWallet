@@ -62,50 +62,50 @@ export default {
         {
             icon: "shopping-cart",
             noti: "-",
-            price: "$ 100.00",
-            title: "freelance",
+            price: "$ 59.00",
+            title: "products",
             date: "10 Dec, 10:30"
         }, {
             icon: "long-arrow-alt-down",
             noti: "+",
-            price: "$ 100.00",
-            title: "freelance",
+            price: "$ 134.00",
+            title: "From: 537825****4217",
             date: "10 Dec, 10:30"
         }, {
             icon: "utensils",
             noti: "-",
-            price: "$ 100.00",
-            title: "freelance",
+            price: "$ 84.00",
+            title: "Resturants & Cafes",
             date: "10 Dec, 10:30"
         }, {
             icon: "tshirt",
             noti: "-",
-            price: "$ 100.00",
-            title: "freelance",
+            price: "$ 14.00",
+            title: "clothes",
             date: "10 Dec, 10:30"
         }, {
             icon: "heart",
             noti: "+",
             price: "$ 100.00",
-            title: "freelance",
+            title: "Health",
             date: "10 Dec, 10:30"
         }, {
             icon: "arrows-alt-v",
-            price: "$ 100.00",
+            price: "$ 80.00",
             noti: "-",
-            title: "freelance",
+            title: "transfer",
             date: "10 Dec, 10:30"
         }, {
             icon: "cloud",
             noti: "+",
-            price: "$ 100.00",
-            title: "freelance",
+            price: "$ 13.00",
+            title: "Transport",
             date: "10 Dec, 10:30"
         }, {
             icon: "car-side",
             noti: "-",
-            price: "$ 100.00",
-            title: "freelance",
+            price: "$ 340.00",
+            title: "car",
             date: "10 Dec, 10:30"
         },
     ],

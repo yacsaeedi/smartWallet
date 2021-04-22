@@ -1,4 +1,13 @@
 export * from './Elements/Header';
+// export * from './Elements/NavBar';
+// export * from './Elements/MySlider';
+// export * from './Elements/SwipeoutBtn';
+// export * from './Elements/LimitsList';
+// export * from './Elements/StaticList';
+
+
+
+
 
 import _NavBar from './Elements/NavBar';
 import _MySlider from './Elements/MySlider';

@@ -27,9 +27,11 @@ const MoneyBox = (props) => {
             <View style={[styles.container, ParentStyle.marginWrp_H, ParentStyle.center_cloumn, styles.listMargin]}>
                 <FlatList
                     data={Data.planList}
-                    renderItem={({ item }) => {
+                    renderItem={({ item, index }) => {
                         return (
-                            <View style={[styles.btnBox, ParentStyle.row]}>
+                            <View
+                                key={index}
+                                style={[styles.btnBox, ParentStyle.row]}>
                                 <View style={[ParentStyle.row, styles.rightContent]}>
                                     <View style={[styles.infoText, { opacity: item.busy == "100%" ? .2 : 1 }]} >
                                         <Text style={ParentStyle.Text_W_M}>{item.title}</Text>

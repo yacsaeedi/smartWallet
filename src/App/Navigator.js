@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React, { useState, useEffect } from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import {Home, Cards, MoneyBox, Limits, Statistic} from '../Screens';
-import {Color} from '../Constants';
+import { Home, Cards, MoneyBox, Limits, Statistic } from '../Screens';
+import { Color } from '../Constants';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -25,11 +25,11 @@ const TabScreen = () => {
   const [context, setContext] = useState(user);
   const [state, setstate] = useState(true);
 
-  useEffect(() => {}, [context]);
+  useEffect(() => { }, [context]);
 
-  const screenOptions = ({route}) => ({
+  const screenOptions = ({ route }) => ({
     tabBarVisible: state,
-    tabBarIcon: ({color}) => {
+    tabBarIcon: ({ color }) => {
       const routeName = route.name;
       const iconName = tabsIcon[routeName];
       return <Icon name={iconName} size={19} color={color} />;
@@ -44,27 +44,22 @@ const TabScreen = () => {
         backBehavior="none"
         initialRouteName="Home">
         <Tab.Screen
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           name="Home"
           component={Home}
         />
         <Tab.Screen
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           name="MoneyBox"
           component={MoneyBox}
         />
         <Tab.Screen
-          options={{headerShown: false}}
-          name="Cards"
-          component={Cards}
-        />
-        <Tab.Screen
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           name="Limits"
           component={Limits}
         />
         <Tab.Screen
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           name="Statistic"
           component={Statistic}
         />
@@ -78,9 +73,14 @@ const Navigator = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Stack"
+          name="Home"
           component={TabScreen}
-          options={{headerShown: false, tabBarVisible: false}}
+          options={{ headerShown: false, tabBarVisible: false }}
+        />
+        <Stack.Screen
+          name="Cards"
+          component={Cards}
+          options={{ headerShown: false, tabBarVisible: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

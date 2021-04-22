@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {Text, View, Pressable} from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, Pressable } from 'react-native';
 import styles from './NavBarstyle';
 import ParentStyle from '../../../Styles/ParentStyle';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {Color} from '../../../Constants';
+import { Color } from '../../../Constants';
 
-const NavBar = props => {
+const NavBar = (props) => {
   const {
     number,
     textNav,
@@ -15,6 +15,8 @@ const NavBar = props => {
     iconName,
     iconNameRight,
     iconNameLeft,
+    route,
+    navigation
   } = props;
   const [Change, setChange] = useState(change);
 
@@ -29,9 +31,11 @@ const NavBar = props => {
         <View style={styles.titleBox}>
           <Text style={[ParentStyle.Text_W_B]}>{textNav}</Text>
         </View>
-        <View style={(styles.titleBox, {marginTop: 5})}>
+        <View style={(styles.titleBox, { marginTop: 5 })}>
           {showIcon ? (
-            <View style={[ParentStyle.center_row, styles.BoxNav]}>
+            <Pressable
+              onPress={() => route ? navigation.navigate(route) : null}
+              style={[ParentStyle.center_row, styles.BoxNav]}>
               <Text
                 style={[
                   ParentStyle.Text_C_l,
@@ -41,7 +45,7 @@ const NavBar = props => {
                 {number}
               </Text>
               <Icon name="angle-right" size={17} color={Color.lightTxt} />
-            </View>
+            </Pressable>
           ) : null}
         </View>
       </View>
@@ -54,11 +58,11 @@ const NavBar = props => {
           ParentStyle.paddingWrp_H,
           ParentStyle.between_row,
         ]}>
-        <View style={styles.titleBox_nav2}>
+        <Pressable
+          onPress={() => navigation.goBack()}
+          style={styles.titleBox_nav2}>
           <Icon name={iconNameLeft} size={17} color={Color.white} />
-
-          {/* <Text style={[ParentStyle.Text_C_l, ParentStyle.text_center]}>@</Text> */}
-        </View>
+        </Pressable>
         <View style={(styles.titleBox_nav2, styles.box_size)}>
           <Text style={[ParentStyle.Text_W_L]}>{textNav}</Text>
         </View>
