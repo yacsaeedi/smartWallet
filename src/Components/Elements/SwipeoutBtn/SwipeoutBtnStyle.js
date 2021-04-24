@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Color } from "../../../Constants"
+import { Color, Theme } from "../../../Constants"
 const styles = StyleSheet.create({
     btnBox: {
         backgroundColor: Color.bgBox,
@@ -25,7 +25,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
-        marginBottom: 8
+        marginBottom: 8,
+        fontFamily: Theme.Fonts.medium,
+        fontSize: 14
 
     },
     rightBtn: {
@@ -35,7 +37,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         width: "50%",
-        marginBottom: 8
+        marginBottom: 8,
+        fontFamily: Theme.Fonts.medium,
+        fontSize: 14
 
     },
     imageStyle: {
@@ -60,6 +64,11 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         paddingRight: 20
 
+    },
+    abslBox: {
+        backgroundColor: Color.lightGreen,
+        width: "50%",
+        height: "100%"
     }
 })
 export default styles

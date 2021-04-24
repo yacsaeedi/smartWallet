@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { TouchableOpacity, Text, View, FlatList, ScrollView } from 'react-native';
+import React, { useEffect, useContext } from 'react';
+import { Text, View, FlatList, ScrollView } from 'react-native';
 import ParentStyle from '../../Styles';
 import { NavBar } from "../../Components"
 import styles from './MoneyBoxStyle';
@@ -34,7 +34,7 @@ const MoneyBox = (props) => {
                                 style={[styles.btnBox, ParentStyle.row]}>
                                 <View style={[ParentStyle.row, styles.rightContent]}>
                                     <View style={[styles.infoText, { opacity: item.busy == "100%" ? .2 : 1 }]} >
-                                        <Text style={ParentStyle.Text_W_M}>{item.title}</Text>
+                                        <Text style={ParentStyle.Text_W_TR}>{item.title}</Text>
                                         <Text style={ParentStyle.Text_W_S}>{item.price}/{item.total}</Text>
                                     </View>
                                 </View>

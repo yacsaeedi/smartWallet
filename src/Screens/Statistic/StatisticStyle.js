@@ -19,7 +19,12 @@ const styles = StyleSheet.create({
     gaugeText: {
         backgroundColor: 'transparent',
         color: '#000',
-        marginTop: 10
+        marginTop: 5
     },
+    chartBox: {
+        width: 300,
+        height: 250,
+        marginTop: 20
+    }
 })
 export default styles

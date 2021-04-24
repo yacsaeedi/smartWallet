@@ -77,7 +77,7 @@ const NavBar = (props) => {
           ParentStyle.between_row,
         ]}>
         <View style={(styles.titleBox_nav2, styles.box_size)}>
-          <Text style={[ParentStyle.Text_W_U]}>{textNav}</Text>
+          <Text style={[ParentStyle.Text_W_L]}>{textNav}</Text>
         </View>
       </View>
     );
@@ -94,7 +94,7 @@ const NavBar = (props) => {
         </View>
         <View style={styles.titleBox}>
           <Pressable style={styles.iconboxheader}>
-            <Icon name="plus" size={16} color={Color.white} />
+            <Icon name="plus" size={13} color={Color.white} />
           </Pressable>
         </View>
       </View>

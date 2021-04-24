@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { TouchableOpacity, Text, View, Modal, Pressable, ScrollView, KeyboardAvoidingView, SafeAreaView, TextInput } from 'react-native';
+import { Text, View, ScrollView, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+
 import ParentStyle from "../../Styles";
 import styles from "./LimitsStyle";
 import { NavBar, LimitsList } from "../../Components";
@@ -24,8 +25,8 @@ const Limits = (props) => {
                 onScroll={handleScroll}
                 style={[ParentStyle.wrp]}>
                 <KeyboardAvoidingView>
-                    <NavBar textNav="Card" change={"HomeNav"} showIcon={false} />
-                    <Text style={[ParentStyle.Text_C_R, ParentStyle.marginWrp_H]}>set limits evry month to save money</Text>
+                    <NavBar textNav="Limits" change={"HomeNav"} showIcon={false} />
+                    <Text style={[ParentStyle.Text_C_Xs, ParentStyle.marginWrp_H]}>set limits evry month to save money</Text>
                     <ScrollView style={styles.mrgTop}>
                         <View style={[styles.limitsBox]}>
                             <LimitsList />

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Text, View, FlatList, Modal, Pressable, TextInput, KeyboardAvoidingView, ScrollView } from 'react-native';
+import { Text, View, FlatList, Modal, Pressable, TextInput } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 import styles from "./LimitsListStyle";
 import ParentStyle from "../../../Styles"
 import { Data, Color } from "../../../Constants";
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import { NavBar } from "../navBar"
+
 const LimitsList = (props) => {
     const { showDate, showModal } = props
     const [modalVisible, setModalVisible] = useState(false);
@@ -54,8 +55,8 @@ const LimitsList = (props) => {
                                 <View style={styles.iconboxheader} >
                                     <Icon name={item.icon} size={10} color={Color.white} />
                                 </View>
-                                <Text style={[ParentStyle.Text_W_U]}>{item.title}</Text>
-                                <Text style={ParentStyle.Text_C_l}>{item.price}/{values.total}
+                                <Text style={[ParentStyle.Text_W_TR]}>{item.title}</Text>
+                                <Text style={ParentStyle.Text_C_Xs}>{item.price}/{values.total}
                                 </Text>
                             </View>
                             {item.busy == "0%" ?
@@ -74,7 +75,7 @@ const LimitsList = (props) => {
             <Pressable
                 style={styles.centeredView}>
                 <Modal
-                    animationType="slide"
+                    animationType="fade"
                     transparent={true}
                     visible={modalVisible}
                     statusBarTranslucent={true}
@@ -85,12 +86,10 @@ const LimitsList = (props) => {
                         }}
                         style={styles.centeredView1}>
                         <View style={[styles.modalView]}>
-                            <View style={styles.btnTop}>
-
-                            </View>
+                            <View style={styles.btnTop}></View>
                             <View style={styles.modalHeader}>
-                                <NavBar textNav={values.title} change={"HomeNav"} showIcon={false} />
-                                <Text style={[ParentStyle.Text_C_R, ParentStyle.marginWrp_H, { lineHeight: 20 }]}>set limits evry month to save money set limits evry month to save money set limits evry month to save money</Text>
+                                <Text style={[ParentStyle.Text_W_xL, ParentStyle.marginWrp_H]}>{values.title}</Text>
+                                <Text style={[ParentStyle.Text_C_Xs, ParentStyle.marginWrp_H, { lineHeight: 20 }]}>set limits evry month to save money set limits evry month to save money set limits</Text>
                             </View>
                             <View style={[ParentStyle.center_cloumn, ParentStyle.paddingWrp_H, styles.inputParent, ParentStyle.between_cloumn]}>
                                 <TextInput
@@ -109,7 +108,7 @@ const LimitsList = (props) => {
                                 >
                                     <Text style={[ParentStyle.Text_W_M, ParentStyle.text_center]}>Change</Text>
                                 </Pressable>
-                                <Text style={[ParentStyle.text_center, ParentStyle.Text_W_M, { alignSelf: 'center', paddingVertical: 10 }]}>No Limit</Text>
+                                <Text style={[ParentStyle.text_center, ParentStyle.Text_W_M, styles.textBlue]}>No Limit</Text>
                             </View>
                         </View>
                     </Pressable>

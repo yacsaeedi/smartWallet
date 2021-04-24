@@ -9,7 +9,7 @@ const Cards = (props) => {
   return (
     <ScrollView style={[ParentStyle.wrp]}>
       <NavBar
-        textNav="Card"
+        textNav="Cards"
         number="4"
         change={'navCenter'}
         iconNameLeft="chevron-left"

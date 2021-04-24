@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     mrgTop: {
-        marginTop: 10,
+        marginTop: 5,
         marginBottom: 80,
 
     }

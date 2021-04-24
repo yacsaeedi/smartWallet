@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { Home, Cards, MoneyBox, Limits, Statistic } from '../Screens';
-import { Color } from '../Constants';
+import { Color, Theme } from '../Constants';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -92,8 +92,9 @@ const tabBarOptions = {
   activeTintColor: Color.white,
   inactiveTintColor: Color.lightTxt,
   labelStyle: {
-    fontSize: 12,
+    fontSize: 11,
     marginBottom: 10,
+    fontFamily: Theme.Fonts.medium,
   },
   style: {
     borderTopWidth: 0.5,

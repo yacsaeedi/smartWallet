@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         marginTop: 6
     },
     mrg_rightIcon: {
-        marginRight: 5
+        marginRight: 3
     },
     iconbox: {
         width: 28,

@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     infoText: {
         justifyContent: "space-around",
         alignItems: "flex-start",
-        paddingVertical: 5,
+        paddingVertical: 8,
         zIndex: 1
     },
     listMargin: {

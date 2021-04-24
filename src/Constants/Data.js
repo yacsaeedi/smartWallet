@@ -5,28 +5,28 @@ export default {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 100.00",
-            job: "freelance",
+            job: "Freelance",
             cNumber: "**** 8658",
             bgColor: Color.blue
         }, {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 300.00",
-            job: "freelance",
+            job: "Scholarship",
             cNumber: "**** 8757",
             bgColor: Color.bgBox
         }, {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 900.00",
-            job: "freelance",
+            job: "Main",
             cNumber: "**** 2136",
             bgColor: Color.blue
         }, {
             img: "cc-mastercard",
             icon: "cc-visa",
             number: "$ 400.00",
-            job: "freelance",
+            job: "UpWork",
             cNumber: "**** 7767",
             bgColor: Color.bgBox
         },
@@ -35,7 +35,7 @@ export default {
         {
             icon: "cc-visa",
             number: "$ 100.00",
-            job: "freelance",
+            job: "Freelance",
             cNumber: "**** 8658",
             bgColor: Color.blue
         }, {

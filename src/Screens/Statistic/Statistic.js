@@ -30,14 +30,7 @@ const Statistic = (props) => {
             <NavBar textNav="December" centerTitle={true} change="HomeNav" />
             <View style={styles.container}>
                 <View
-                    style={{
-                        flexDirection: 'row',
-                        width: 300,
-                        height: 250,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        marginTop: 20
-                    }}
+                    style={[ParentStyle.center_row, styles.chartBox]}
                 >
                     <Pie
                         radius={133}
@@ -70,8 +63,8 @@ const Statistic = (props) => {
                     />
                     <View style={styles.gauge}>
                         <Icon name="shopping-cart" size={14} color={Color.lightTxt} />
-                        <Text style={[styles.gaugeText, ParentStyle.Text_C_R]}>Product</Text>
-                        <Text style={[styles.gaugeText, ParentStyle.Text_W_T]}>-$ 500,00</Text>
+                        <Text style={[styles.gaugeText, ParentStyle.Text_C_Xs]}>Products</Text>
+                        <Text style={[styles.gaugeText, ParentStyle.Text_W_U]}>-$ 500,00</Text>
                     </View>
                 </View>
             </View>

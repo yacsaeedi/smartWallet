@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         marginTop: 22,
-        backgroundColor: "transparent",
+        backgroundColor: "#17191f47",
         flex: 1
 
     },
@@ -97,7 +97,8 @@ const styles = StyleSheet.create({
         backgroundColor: Color.bgBox,
         width: "30%",
         marginTop: 5,
-        borderRadius: 50
+        borderRadius: 50,
+        marginBottom: 20
     },
     inputParent: {
         width: "100%",
@@ -117,6 +118,11 @@ const styles = StyleSheet.create({
         backgroundColor: Color.blue,
         borderRadius: 8,
         marginBottom: 10
+    },
+    textBlue: {
+        alignSelf: 'center',
+        paddingVertical: 10,
+        color: Color.blue
     }
 })
 export default styles

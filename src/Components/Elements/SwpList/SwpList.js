@@ -1,5 +1,5 @@
-import React, { useState, useEffect, } from 'react';
-import { TouchableOpacity, Text, View, FlatList, ScrollView } from 'react-native';
+import React from 'react';
+import { Text, View, FlatList, Pressable } from 'react-native';
 import { NavBar, SwipeoutBtn } from "../../../Components"
 import ParentStyle from "../../../Styles";
 import styles from "./SwpListStyle";
@@ -21,12 +21,12 @@ const SwpList = (props) => {
                     }}
                     ListFooterComponent={() => {
                         return (
-                            <View style={[styles.footerList, ParentStyle.center_row]}>
+                            <Pressable style={[styles.footerList, ParentStyle.center_row]}>
                                 <View style={[ParentStyle.center_row]}>
-                                    <Icon name="plus" size={10} color={Color.lightTxt} />
-                                    <Text style={[ParentStyle.Text_C_M]}> ADD CARD</Text>
+                                    <Icon name="plus" size={9} color={Color.lightTxt} />
+                                    <Text style={[ParentStyle.Text_C_U]}> Add Card</Text>
                                 </View>
-                            </View>
+                            </Pressable>
                         )
                     }}
                 />

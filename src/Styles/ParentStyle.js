@@ -54,27 +54,42 @@ const ParentStyle = StyleSheet.create({
   Text_W_M: {
     color: Color.white,
     fontSize: 14,
-    fontFamily: 'medium',
+    fontFamily: Theme.Fonts.medium,
   },
   Text_W_U: {
     color: Color.white,
-    fontSize: 18,
-    // fontFamily: Theme.Fonts.bold,
+    fontSize: 15,
+    fontFamily: Theme.Fonts.medium,
   },
   Text_W_T: {
     color: Color.white,
     fontSize: 16,
-    // fontFamily: Theme.Fonts.bold,
+    fontFamily: Theme.Fonts.regular,
+  },
+  Text_W_TR: {
+    color: Color.white,
+    fontSize: 17,
+    fontFamily: Theme.Fonts.medium,
   },
   Text_W_L: {
     color: Color.white,
     fontSize: 20,
-    fontFamily: 'large',
+    fontFamily: Theme.Fonts.medium,
+  },
+  Text_W_xL: {
+    color: Color.white,
+    fontSize: 22,
+    fontFamily: Theme.Fonts.medium,
   },
   Text_C_M: {
     color: Color.lightTxt,
     fontSize: 14,
-    fontFamily: 'medium',
+    fontFamily: Theme.Fonts.medium,
+  },
+  Text_C_Xs: {
+    color: Color.lightTxt,
+    fontSize: 13,
+    fontFamily: Theme.Fonts.medium,
   },
   Text_W_B: {
     color: Color.white,
@@ -84,22 +99,27 @@ const ParentStyle = StyleSheet.create({
   Text_C_l: {
     color: Color.lightTxt,
     fontSize: 12,
-    fontFamily: 'ulLight'
+    fontFamily: Theme.Fonts.regular,
   },
   Text_C_R: {
     color: '#b6b7ba',
     fontSize: 12,
-    fontFamily: 'ulLight',
+    fontFamily: Theme.Fonts.light,
+  },
+  Text_C_U: {
+    color: Color.lightTxt,
+    fontSize: 15,
+    fontFamily: Theme.Fonts.medium,
   },
   Text_W_R: {
     color: Color.white,
     fontSize: 10,
-    fontFamily: 'regular',
+    fontFamily: Theme.Fonts.regular,
   },
   Text_W_S: {
     color: Color.white,
     fontSize: 12,
-    fontFamily: 'light',
+    fontFamily: Theme.Fonts.light,
   },
   text_center: {
     textAlign: 'center',

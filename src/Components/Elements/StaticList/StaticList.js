@@ -34,8 +34,8 @@ const StaticList = (props) => {
                         <View style={ParentStyle.center_row}>
                             <Text style={ParentStyle.Text_W_M}>{item.noti}</Text>
                             <Text style={ParentStyle.Text_W_M}>{item.price}</Text>
-                            <Text style={[ParentStyle.Text_C_R]}>/</Text>
-                            <Text style={[ParentStyle.Text_C_R, { marginTop: 2 }]}>{item.val}</Text>
+                            <Text style={[ParentStyle.Text_C_l]}>/</Text>
+                            <Text style={[ParentStyle.Text_C_l, { marginTop: 2 }]}>{item.val}</Text>
 
                         </View>
                     </Pressable>
