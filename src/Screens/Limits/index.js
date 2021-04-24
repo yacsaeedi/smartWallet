@@ -1,2 +1,1 @@
-import Limits from "./Limits";
-export default Limits
+export { default as Limits } from './Limits';

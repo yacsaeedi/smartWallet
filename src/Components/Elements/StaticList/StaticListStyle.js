@@ -22,12 +22,11 @@ const styles = StyleSheet.create({
     },
     tranBox: {
         paddingVertical: 10,
-        borderBottomColor: Color.bgBox,
-        borderBottomWidth: .9
+
     },
     iconbox: {
-        width: 30,
-        height: 30,
+        width: 36,
+        height: 36,
         backgroundColor: "#ccc",
         borderRadius: 50,
         backgroundColor: Color.bgBox,
@@ -35,6 +34,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
+    text_limit: {
+        width: 120
+    }
 
 })
 export default styles

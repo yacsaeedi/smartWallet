@@ -1,2 +1,1 @@
-import StaticList from "./StaticList";
-export default StaticList;
+export { default as StaticList } from './StaticList';

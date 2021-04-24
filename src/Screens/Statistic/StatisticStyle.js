@@ -5,21 +5,21 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 30
+        marginBottom: 30,
     },
     gauge: {
         position: 'absolute',
-        width: 70,
-        height: 50,
+        width: 90,
+        height: 90,
         alignItems: 'center',
-        justifyContent: "space-around",
-        bottom: 70,
-        left: 45
+        justifyContent: "center",
+        bottom: 85,
+        left: 105,
     },
     gaugeText: {
         backgroundColor: 'transparent',
         color: '#000',
-        fontSize: 24,
+        marginTop: 10
     },
 })
 export default styles

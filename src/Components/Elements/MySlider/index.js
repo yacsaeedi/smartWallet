@@ -1,2 +1,1 @@
-import MySlider from "./MySlider";
-export default MySlider;
+export { default as MySlider } from './MySlider';

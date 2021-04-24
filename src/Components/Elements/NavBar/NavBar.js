@@ -3,7 +3,7 @@ import { Text, View, Pressable } from 'react-native';
 import styles from './NavBarstyle';
 import ParentStyle from '../../../Styles/ParentStyle';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Color } from '../../../Constants';
+import { Color, Theme } from '../../../Constants';
 
 const NavBar = (props) => {
   const {
@@ -94,7 +94,7 @@ const NavBar = (props) => {
         </View>
         <View style={styles.titleBox}>
           <Pressable style={styles.iconboxheader}>
-            <Icon name="plus" size={13} color={Color.white} />
+            <Icon name="plus" size={16} color={Color.white} />
           </Pressable>
         </View>
       </View>
@@ -105,18 +105,12 @@ const NavBar = (props) => {
         style={[
           styles.navWrp,
           ParentStyle.paddingWrp_H,
-          ParentStyle.between_row,
+          ParentStyle.center_row,
         ]}>
-        <Pressable style={[styles.titleBox_nav2]}>
-          <Icon name={iconNameRight} size={17} color={Color.white} />
-        </Pressable>
-        <View style={[styles.box_size, ParentStyle.between_row]}>
+        <View style={[ParentStyle.center_row]}>
           <Text style={[ParentStyle.Text_W_L, ParentStyle.text_center]}>
             {textNav}
           </Text>
-          <Pressable style={styles.iconbox}>
-            <Icon name={iconNameLeft} size={13} color={Color.white} />
-          </Pressable>
         </View>
       </View>
     );

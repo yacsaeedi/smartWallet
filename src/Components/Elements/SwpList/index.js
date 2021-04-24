@@ -1,2 +1,1 @@
-import SwpList from "./SwpList";
-export default SwpList;
+export { default as SwpList } from './SwpList';

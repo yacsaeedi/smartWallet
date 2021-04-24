@@ -36,7 +36,6 @@ const MySlider = (props) => {
             sliderWidth={400}
             itemWidth={230}
             layout={'default'}
-            layoutCardOffset={`18`}
             inactiveSlideScale={1}
             loop={true}
 

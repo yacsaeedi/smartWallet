@@ -26,6 +26,7 @@ const SwipeoutBtn = (props) => {
                     className: 'custom-class-2'
                 }
             ]}
+
         // onOpen={
         //     () => console.log('open')
         // }
@@ -33,17 +34,25 @@ const SwipeoutBtn = (props) => {
         >
             <Pressable
                 style={[styles.btnBox, ParentStyle.row]}>
-                <View style={[ParentStyle.row, styles.rightContent]}>
-                    <View style={[ParentStyle.center_row, styles.imageBox]} >
-                        <Icon name={item.icon} size={17} color={Color.white} style={styles.imageStyle} />
+
+
+                <View style={{ backgroundColor: Color.lightGreen, width: "50%", height: "100%" }}></View>
+                <View style={{ backgroundColor: Color.blue, width: "50%", height: "100%", alignItems: 'flex-start' }}></View>
+                <View
+                    style={[styles.btnBox1, ParentStyle.row]}
+                >
+                    <View style={[ParentStyle.row, styles.rightContent]}>
+                        <View style={[ParentStyle.center_row, styles.imageBox]} >
+                            <Icon name={item.icon} size={17} color={Color.white} style={styles.imageStyle} />
+                        </View>
+                        <View style={[ParentStyle.center_cloumn, styles.imageBox]} >
+                            <Text style={ParentStyle.Text_W_M}>CARD NUMBER</Text>
+                            <Text style={ParentStyle.Text_W_S}>{item.cNumber}</Text>
+                        </View>
                     </View>
-                    <View style={[ParentStyle.center_cloumn, styles.imageBox]} >
-                        <Text style={ParentStyle.Text_W_M}>CARD NUMBER</Text>
-                        <Text style={ParentStyle.Text_W_S}>{item.cNumber}</Text>
+                    <View style={[ParentStyle.center_row, styles.leftContent]}>
+                        <Text style={ParentStyle.Text_W_L}>{item.number}</Text>
                     </View>
-                </View>
-                <View style={[ParentStyle.center_row, styles.leftContent]}>
-                    <Text style={ParentStyle.Text_W_L}>{item.number}</Text>
                 </View>
             </Pressable>
         </Swipeout>

@@ -20,7 +20,7 @@ const Mylist = (props) => {
                             [ParentStyle.between_row, ParentStyle.marginWrp_H, styles.tranBox]}>
                         <View style={[ParentStyle.center_row]}>
                             <View style={styles.iconbox} >
-                                <Icon name={item.icon} size={10} color={Color.lightTxt} />
+                                <Icon name={item.icon} size={10} color={Color.white} />
                             </View>
                             <View style={ParentStyle.center_cloumn}>
                                 <Text style={ParentStyle.Text_W_M}>{item.title}</Text>

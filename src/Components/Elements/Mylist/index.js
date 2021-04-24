@@ -1,2 +1,1 @@
-import Mylist from "./Mylist";
-export default Mylist;
+export { default as Mylist } from './Mylist';

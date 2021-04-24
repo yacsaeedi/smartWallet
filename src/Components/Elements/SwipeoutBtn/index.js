@@ -1,2 +1,1 @@
-import SwipeoutBtn from "./SwipeoutBtn";
-export default SwipeoutBtn;
+export { default as SwipeoutBtn } from './SwipeoutBtn';

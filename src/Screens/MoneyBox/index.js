@@ -1,2 +1,1 @@
-import MoneyBox from "./MoneyBox";
-export default MoneyBox
+export { default as MoneyBox } from './MoneyBox';

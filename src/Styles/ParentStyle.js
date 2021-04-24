@@ -59,7 +59,12 @@ const ParentStyle = StyleSheet.create({
   Text_W_U: {
     color: Color.white,
     fontSize: 18,
-    fontFamily: 'medium',
+    // fontFamily: Theme.Fonts.bold,
+  },
+  Text_W_T: {
+    color: Color.white,
+    fontSize: 16,
+    // fontFamily: Theme.Fonts.bold,
   },
   Text_W_L: {
     color: Color.white,

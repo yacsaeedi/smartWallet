@@ -4,7 +4,7 @@ import styles from "./LimitsListStyle";
 import ParentStyle from "../../../Styles"
 import { Data, Color } from "../../../Constants";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import NavBar from "../NavBar"
+import { NavBar } from "../navBar"
 const LimitsList = (props) => {
     const { showDate, showModal } = props
     const [modalVisible, setModalVisible] = useState(false);
@@ -52,7 +52,7 @@ const LimitsList = (props) => {
                         >
                             <View style={styles.content}>
                                 <View style={styles.iconboxheader} >
-                                    <Icon name={item.icon} size={14} color={Color.lightTxt} />
+                                    <Icon name={item.icon} size={10} color={Color.white} />
                                 </View>
                                 <Text style={[ParentStyle.Text_W_U]}>{item.title}</Text>
                                 <Text style={ParentStyle.Text_C_l}>{item.price}/{values.total}

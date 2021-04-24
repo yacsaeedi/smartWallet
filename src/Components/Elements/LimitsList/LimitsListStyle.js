@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
         backgroundColor: Color.bgBox,
         margin: "1%",
         borderRadius: 8,
-        padding: 15,
+        padding: 12,
+        paddingTop: 13,
         justifyContent: "space-between"
     },
     content: {
@@ -16,8 +17,8 @@ const styles = StyleSheet.create({
 
     },
     iconboxheader: {
-        width: 30,
-        height: 30,
+        width: 32,
+        height: 32,
         backgroundColor: "#ccc",
         borderRadius: 50,
         backgroundColor: Color.BgIcon,

@@ -5,8 +5,18 @@ const styles = StyleSheet.create({
         backgroundColor: Color.bgBox,
         width: "100%",
         height: 60,
-        borderRadius: 8,
-        marginBottom: 8
+        borderRadius: 11,
+        marginBottom: 8,
+        position: "relative"
+    },
+    btnBox1: {
+        backgroundColor: Color.bgBox,
+        width: "100%",
+        height: "100%",
+        borderRadius: 11,
+        position: "absolute",
+        zIndex: 10000,
+
     },
     LeftBtn: {
         backgroundColor: Color.lightGreen,
@@ -24,7 +34,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         alignItems: "center",
         justifyContent: "center",
-        alignSelf: "center",
+        width: "50%",
         marginBottom: 8
 
     },
@@ -41,7 +51,8 @@ const styles = StyleSheet.create({
     },
     rightContent: {
         flex: 1,
-        paddingHorizontal: 20
+        paddingHorizontal: 20,
+        borderRadius: 10
     },
     leftContent: {
         flex: 1,

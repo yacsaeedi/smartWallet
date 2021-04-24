@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     },
     iconboxheader: {
-        width: 28,
-        height: 28,
+        width: 33,
+        height: 33,
         backgroundColor: "#ccc",
         borderRadius: 50,
         backgroundColor: Color.bgBox,

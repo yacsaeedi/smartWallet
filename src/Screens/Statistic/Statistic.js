@@ -1,11 +1,13 @@
 import React, { useEffect, useContext } from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import { NavBar, StaticList } from "../../Components";
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Pie from 'react-native-pie';
 import styles from "./StatisticStyle";
 import ParentStyle from "../../Styles";
-import Icon from 'react-native-vector-icons/FontAwesome5';
+
+import { NavBar, StaticList } from "../../Components";
 import { Color, Data } from "../../Constants"
-import Pie from 'react-native-pie';
+
 import { UserContext } from "../../App/Navigator";
 
 const Statistic = (props) => {
@@ -29,18 +31,23 @@ const Statistic = (props) => {
             <View style={styles.container}>
                 <View
                     style={{
-                        paddingVertical: 15,
                         flexDirection: 'row',
-                        justifyContent: 'space-between',
+                        width: 300,
+                        height: 250,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginTop: 20
                     }}
                 >
                     <Pie
-                        radius={80}
-                        innerRadius={50}
+                        radius={133}
+                        innerRadius={80}
+                        strokeCap={'butt'}
                         sections={[
                             {
                                 percentage: 30,
                                 color: Color.blue,
+
                             },
                             {
                                 percentage: 10,
@@ -59,12 +66,12 @@ const Statistic = (props) => {
                                 color: Color.chartBg,
                             },
                         ]}
-                        strokeCap={'butt'}
+
                     />
                     <View style={styles.gauge}>
                         <Icon name="shopping-cart" size={14} color={Color.lightTxt} />
-                        <Text style={[styles.gaugeText, ParentStyle.Text_C_M]}>Product</Text>
-                        <Text style={[styles.gaugeText, ParentStyle.Text_W_M]}>-$ 500,00</Text>
+                        <Text style={[styles.gaugeText, ParentStyle.Text_C_R]}>Product</Text>
+                        <Text style={[styles.gaugeText, ParentStyle.Text_W_T]}>-$ 500,00</Text>
                     </View>
                 </View>
             </View>
