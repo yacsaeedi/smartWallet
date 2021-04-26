@@ -7,7 +7,7 @@ import { Color } from "../../../Constants";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const SwpList = (props) => {
-    const { navTitle, navnumber, navChange, IconState, list, iconName } = props
+    const { navTitle, navnumber, navChange, IconState, list, iconName, navigation } = props
     return (
         <>
             <NavBar textNav={navTitle} number={navnumber} change={navChange} showIcon={IconState} />
@@ -21,7 +21,9 @@ const SwpList = (props) => {
                     }}
                     ListFooterComponent={() => {
                         return (
-                            <Pressable style={[styles.footerList, ParentStyle.center_row]}>
+                            <Pressable
+                                onPress={() => navigation.navigate("Cvv2")}
+                                style={[styles.footerList, ParentStyle.center_row]}>
                                 <View style={[ParentStyle.center_row]}>
                                     <Icon name="plus" size={9} color={Color.lightTxt} />
                                     <Text style={[ParentStyle.Text_C_U]}> Add Card</Text>

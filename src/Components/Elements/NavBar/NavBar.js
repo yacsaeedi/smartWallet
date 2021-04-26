@@ -68,6 +68,24 @@ const NavBar = (props) => {
         </View>
       </View>
     );
+  } else if (change == 'navCvv2') {
+    return (
+      <View
+        style={[
+          styles.navWrp,
+          ParentStyle.paddingWrp_H,
+          ParentStyle.between_row,
+        ]}>
+        <Pressable
+          onPress={() => navigation.goBack()}
+          style={styles.titleBox_nav2}>
+          <Icon name={iconNameLeft} size={17} color={Color.white} />
+        </Pressable>
+        <View style={(styles.titleBox_nav2, styles.box_size1)}>
+          <Text style={[ParentStyle.Text_W_L]}>{textNav}</Text>
+        </View>
+      </View>
+    );
   } else if (change == 'ListHeader') {
     return (
       <View

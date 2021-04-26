@@ -64,6 +64,11 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         flex: 1.5,
     },
+    box_size1: {
+        alignItems: "flex-start",
+        justifyContent: "center",
+        flex: 2.1,
+    },
     iconbox: {
         width: 28,
         height: 28,

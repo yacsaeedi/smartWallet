@@ -22,6 +22,7 @@ const Cards = (props) => {
           navChange="ListHeader"
           IconState={false}
           list={Data.listCard}
+          navigation={props.navigation}
         />
         <SwpList
           navTitle="Hidden"
@@ -29,6 +30,7 @@ const Cards = (props) => {
           navChange="ListHeader"
           IconState={false}
           list={Data.listCard}
+          navigation={props.navigation}
         />
       </View>
     </ScrollView>

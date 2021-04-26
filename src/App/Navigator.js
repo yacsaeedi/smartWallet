@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import { Home, Cards, MoneyBox, Limits, Statistic } from '../Screens';
+import { Home, Cards, MoneyBox, Limits, Statistic, Cvv2 } from '../Screens';
 import { Color, Theme } from '../Constants';
 
 const Tab = createBottomTabNavigator();
@@ -42,7 +42,7 @@ const TabScreen = () => {
         tabBarOptions={tabBarOptions}
         screenOptions={screenOptions}
         backBehavior="none"
-        initialRouteName="Home">
+        initialRouteName="Limits">
         <Tab.Screen
           options={{ headerShown: false }}
           name="Home"
@@ -80,6 +80,11 @@ const Navigator = () => {
         <Stack.Screen
           name="Cards"
           component={Cards}
+          options={{ headerShown: false, tabBarVisible: false }}
+        />
+        <Stack.Screen
+          name="Cvv2"
+          component={Cvv2}
           options={{ headerShown: false, tabBarVisible: false }}
         />
       </Stack.Navigator>

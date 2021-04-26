@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Text, View, FlatList, Modal, Pressable, TextInput } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Text, View, FlatList, Modal, Pressable, TextInput, KeyboardAvoidingView, Animated } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import styles from "./LimitsListStyle";
@@ -17,6 +17,24 @@ const LimitsList = (props) => {
         }
     )
     const [numVsl, setnumVsl] = useState(values.total)
+
+    const [activated, setActivated] = useState(false)
+    const [upperAnimation, setUpperAnimation] = useState(new Animated.Value(0))
+    const startAnimation = () => {
+        setActivated(!activated)
+        Animated.timing(upperAnimation, {
+            toValue: 25,
+            duration: 300
+        }).start()
+    }
+    const animatedStyles = {
+        transform: [
+            {
+                translateX: upperAnimation
+            }
+        ]
+    }
+
     const changeValue = (item, id) => {
         let copylist = [...Data.limitsList];
         const finditem = copylist.findIndex((item) => {
@@ -49,6 +67,7 @@ const LimitsList = (props) => {
                                     index: index
                                 })
                                 setModalVisible(true)
+                                startAnimation()
                             }}
                         >
                             <View style={styles.content}>
@@ -65,7 +84,7 @@ const LimitsList = (props) => {
                                 <View
                                     style={styles.busyBox}
                                 >
-                                    <View style={[styles.busyValue, { width: item.busy }]}></View>
+                                    <View style={[styles.busyValue, { width: item.busy }]} />
                                 </View>
                             }
                         </Pressable>

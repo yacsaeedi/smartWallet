@@ -124,5 +124,6 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         color: Color.blue
     }
+
 })
 export default styles
