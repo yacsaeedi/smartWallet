@@ -106,6 +106,11 @@ const ParentStyle = StyleSheet.create({
     fontSize: 25,
     fontFamily: Theme.Fonts.medium,
   },
+  Text_C_xB: {
+    color: Color.lightTxt,
+    fontSize: 16,
+    fontFamily: Theme.Fonts.bold,
+  },
   Text_C_l: {
     color: Color.lightTxt,
     fontSize: 12,

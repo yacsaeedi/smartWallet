@@ -39,7 +39,7 @@ const SwipeoutBtn = (props) => {
                 <View style={[styles.btnBox1, ParentStyle.row]}>
                     <View style={[ParentStyle.row, styles.rightContent]}>
                         <View style={[ParentStyle.center_row, styles.imageBox]}>
-                            <Icon name={item.icon} size={17} color={Color.white} style={styles.imageStyle} />
+                            <Icon name={item.icon} size={17} color={Color.white} style={styles.iconsStyle} />
                         </View>
                         <View style={[ParentStyle.center_cloumn, styles.imageBox]} >
                             <Text style={ParentStyle.Text_W_U}>{item.job}</Text>

@@ -1,34 +1,34 @@
-import React, {useState, useEffect, useContext, createContext} from 'react';
-import {View, ScrollView, Text, Pressable} from 'react-native';
-import {NavBar} from '../../Components';
+import React, { useState, useEffect, useContext, createContext } from 'react';
+import { View, ScrollView, Text, Pressable } from 'react-native';
+import { NavBar } from '../../Components';
 import ParentStyle from '../../Styles';
 import styles from './Cvv2Style';
-import {Card, Keyboard} from './Components';
-let value = '';
+import { Card, Keyboard } from './Components';
 export const CardInfo = createContext();
 const Cvv2 = props => {
   const [titleNav, settitleNav] = useState('');
-  const [num, setNum] = useState('8756 9869 9600 9696');
-  const [activeEl, setActiveEl] = useState('');
+  const [activeEl, setActiveEl] = useState("");
   const [state, setState] = useState({
     card: '',
     cvv2: '',
     date: '',
-    activeInput: 'card',
+    activeInput: '',
   });
-
   useEffect(() => {
-    if (activeEl == 'input1') {
+    setState((prev) => ({
+      ...prev,
+      activeInput: activeEl
+    }))
+    if (activeEl == 'card') {
       settitleNav('Enter Card Code');
-    } else if (activeEl == 'input2') {
+    } else if (activeEl == 'date') {
       settitleNav('Enter Date Code');
-    } else if (activeEl == 'input3') {
+    } else if (activeEl == 'cvv2') {
       settitleNav('Enter Cvv2 Code');
     }
-  });
-
+  }, [activeEl])
   return (
-    <CardInfo.Provider value={[num, setNum, activeEl, setActiveEl]}>
+    <CardInfo.Provider value={[activeEl, setActiveEl]}>
       <View style={[ParentStyle.wrp]}>
         <NavBar
           textNav={titleNav}
@@ -41,13 +41,17 @@ const Cvv2 = props => {
         <Keyboard
           onPressNumber={val => {
             const item = state.activeInput;
-
             setState(prev => ({
               ...prev,
               [item]: val === -1 ? state[item].slice(0, -1) : state[item] + val,
             }));
           }}
         />
+        <Pressable
+          style={[styles.saveChange, ParentStyle.marginWrp_H]}
+        >
+          <Text style={[ParentStyle.Text_W_M, ParentStyle.text_center]}>Continue</Text>
+        </Pressable>
       </View>
     </CardInfo.Provider>
   );

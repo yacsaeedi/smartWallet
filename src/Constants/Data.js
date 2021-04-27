@@ -131,13 +131,6 @@ export default {
       title: 'Products',
     },
     {
-      icon: 'long-arrow-alt-down',
-      val: '22%',
-      noti: '+',
-      price: '$ 956.00',
-      title: 'From: 537825****4217',
-    },
-    {
       icon: 'utensils',
       val: '15%',
       noti: '-',

@@ -42,10 +42,9 @@ const styles = StyleSheet.create({
         fontSize: 14
 
     },
-    imageStyle: {
+    iconsStyle: {
         width: 30,
         height: 20,
-        resizeMode: "cover",
         backgroundColor: "transparent",
         alignSelf: "center",
         marginRight: 12

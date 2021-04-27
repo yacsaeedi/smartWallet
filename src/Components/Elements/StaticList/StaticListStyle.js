@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     },
     tranBox: {
         paddingVertical: 10,
-
     },
     iconbox: {
         width: 36,

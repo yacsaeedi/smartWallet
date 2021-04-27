@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Text,
   View,
@@ -10,13 +10,14 @@ import {
   Animated,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { useFocusEffect } from '@react-navigation/native';
 
 import styles from './LimitsListStyle';
 import ParentStyle from '../../../Styles';
-import {Data, Color} from '../../../Constants';
+import { Data, Color } from '../../../Constants';
 
 const LimitsList = props => {
-  const {showDate, showModal} = props;
+  const { showDate, showModal } = props;
   const [modalVisible, setModalVisible] = useState(false);
   const [values, setValues] = useState({
     total: '',
@@ -26,14 +27,16 @@ const LimitsList = props => {
   const [numVsl, setnumVsl] = useState(values.total);
 
   const [activated, setActivated] = useState(false);
+  const [ww, setww] = useState(true);
 
   const upperAnimation = useRef(new Animated.Value(0)).current;
 
   const startAnimation = () => {
     setActivated(!activated);
+    upperAnimation.setValue(0)
     Animated.timing(upperAnimation, {
       toValue: 1,
-      duration: 1000,
+      duration: 2000,
       useNativeDriver: false,
     }).start();
   };
@@ -53,13 +56,19 @@ const LimitsList = props => {
     }
   };
 
+  useFocusEffect(
+    React.useCallback(() => {
+      startAnimation()
+
+    }, [])
+  );
   return (
     <>
       <FlatList
         data={Data.limitsList}
         numColumns={2}
         showsHorizontalScrollIndicator={false}
-        renderItem={({item, index}) => {
+        renderItem={({ item, index }) => {
           return (
             <Pressable
               key={index}
@@ -71,7 +80,6 @@ const LimitsList = props => {
                   index: index,
                 });
                 // setModalVisible(true);
-                startAnimation();
               }}>
               <View style={styles.content}>
                 <View style={styles.iconboxheader}>
@@ -122,7 +130,7 @@ const LimitsList = props => {
                   style={[
                     ParentStyle.Text_C_Xs,
                     ParentStyle.marginWrp_H,
-                    {lineHeight: 20},
+                    { lineHeight: 20 },
                   ]}>
                   set limits evry month to save money set limits evry month to
                   save money set limits
