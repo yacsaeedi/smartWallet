@@ -14,12 +14,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center'
     },
-    imageStyle: {
-        width: 50,
-        height: 23,
-        resizeMode: "cover",
-        backgroundColor: "transparent"
-    },
     tranBox: {
         paddingVertical: 10,
         borderBottomColor: Color.bgBox,

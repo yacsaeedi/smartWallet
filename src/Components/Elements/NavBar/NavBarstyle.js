@@ -27,11 +27,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         overflow: "hidden"
     },
-    imageStyle: {
-        width: "100%",
-        height: "100%",
-        resizeMode: "cover",
-    },
     infoBox: {
         flex: 7.5,
         justifyContent: "center",

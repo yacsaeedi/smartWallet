@@ -1,12 +1,13 @@
 import React, { useEffect, useContext } from 'react';
 import { Text, View, FlatList, ScrollView } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 import ParentStyle from '../../Styles';
 import { NavBar } from "../../Components"
 import styles from './MoneyBoxStyle';
 import { Data, Color } from '../../Constants';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { UserContext } from "../../App/Navigator";
 
+import { UserContext } from "../../App/Navigator";
 const MoneyBox = (props) => {
     const [context, setContext, state, setstate] = useContext(UserContext);
     const handleScroll = (event) => {
@@ -19,6 +20,7 @@ const MoneyBox = (props) => {
             setstate(false)
         }
     }, [context])
+
     return (
         <ScrollView
             onScroll={handleScroll}
@@ -38,7 +40,6 @@ const MoneyBox = (props) => {
                                         <Text style={ParentStyle.Text_W_S}>{item.price}/{item.total}</Text>
                                     </View>
                                 </View>
-
                                 <View style={[styles.busyBox, { backgroundColor: item.busy == "100%" ? Color.darkGreen : Color.blue, width: item.busy }]}>
                                     {item.busy == "100%" ?
                                         <Text style={ParentStyle.Text_W_M}><Icon name="party-popper" szie={12} color="orange" />  Congratulations! Goal Archive</Text>

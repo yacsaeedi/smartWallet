@@ -79,7 +79,7 @@ const LimitsList = props => {
                   title: item.title,
                   index: index,
                 });
-                // setModalVisible(true);
+                setModalVisible(true);
               }}>
               <View style={styles.content}>
                 <View style={styles.iconboxheader}>

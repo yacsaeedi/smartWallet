@@ -42,7 +42,7 @@ const TabScreen = () => {
         tabBarOptions={tabBarOptions}
         screenOptions={screenOptions}
         backBehavior="none"
-        initialRouteName="Limits">
+        initialRouteName="Home">
         <Tab.Screen
           options={{ headerShown: false }}
           name="Home"

@@ -13,14 +13,6 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: 20
     },
-    imageStyle: {
-        width: 30,
-        height: 20,
-        resizeMode: "cover",
-        backgroundColor: "transparent",
-        alignSelf: "center",
-        marginRight: 12
-    },
     infoText: {
         justifyContent: "space-around",
         alignItems: "flex-start",
