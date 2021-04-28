@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { Home, Cards, MoneyBox, Limits, Statistic, Cvv2 } from '../Screens';
-import { Color, Theme } from '../Constants';
+import { Color, Theme, Data } from '../Constants';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -24,7 +24,7 @@ const tabsIcon = {
 const TabScreen = () => {
   const [context, setContext] = useState(user);
   const [state, setstate] = useState(true);
-
+  const [aryLimit, setAryLimit] = useState(Data.limitsList);
   useEffect(() => { }, [context]);
 
   const screenOptions = ({ route }) => ({
@@ -37,7 +37,7 @@ const TabScreen = () => {
   });
 
   return (
-    <UserContext.Provider value={[context, setContext, state, setstate]}>
+    <UserContext.Provider value={[context, setContext, state, setstate, aryLimit, setAryLimit]}>
       <Tab.Navigator
         tabBarOptions={tabBarOptions}
         screenOptions={screenOptions}

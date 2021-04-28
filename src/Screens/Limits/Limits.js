@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Text, View, ScrollView, KeyboardAvoidingView, SafeAreaView } from 'react-native';
 
 import ParentStyle from "../../Styles";
@@ -7,8 +7,7 @@ import { NavBar, LimitsList } from "../../Components";
 import { UserContext } from "../../App/Navigator"
 
 const Limits = (props) => {
-    const { modalShow } = props
-    const [context, setContext, state, setstate] = useContext(UserContext);
+    const [context, setContext, state, setstate, aryLimit, setAryLimit] = useContext(UserContext);
     const handleScroll = (event) => {
         setContext(event.nativeEvent.contentOffset.y)
     }
@@ -19,6 +18,7 @@ const Limits = (props) => {
             setstate(false)
         }
     }, [context])
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView

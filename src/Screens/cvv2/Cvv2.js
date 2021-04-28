@@ -6,7 +6,7 @@ import styles from './Cvv2Style';
 import { Card, Keyboard } from './Components';
 export const CardInfo = createContext();
 const Cvv2 = props => {
-  const [titleNav, settitleNav] = useState('');
+  const [titleNav, settitleNav] = useState('Enter Codes');
   const [activeEl, setActiveEl] = useState("");
   const [state, setState] = useState({
     card: '',

@@ -6,3 +6,4 @@ export * from './Elements/limitsList';
 export * from './Elements/staticList';
 export * from './Elements/mylist';
 export * from './Elements/swpList';
+export * from './Elements/myModal'

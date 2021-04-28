@@ -14,7 +14,7 @@ import { CardInfo } from '../../Cvv2';
 
 const Card = ({ card, cvv2, date }) => {
     const [activeEl, setActiveEl] = useContext(CardInfo);
-    const [active, setactive] = useState("")
+    const [active, setactive] = useState("");
 
     const MaskText = ({ value, mask, style, char = '_', select }) => {
         const _renderValue = () => {

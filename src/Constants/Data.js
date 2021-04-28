@@ -199,48 +199,15 @@ export default {
       busy: '100%',
     },
   ],
+
   limitsList: [
     {
-      icon: 'shopping-cart',
-      total: '50.000',
-      price: '$ 5.000',
-      title: 'products',
-      busy: '10%',
-    },
-    {
-      icon: 'utensils',
-      total: '0',
-      price: '$ 0',
-      title: 'Resturants & Cafes',
-      busy: '0%',
-    },
-    {
-      icon: 'heart',
-      total: '70.000',
-      price: '$ 1.000',
-      title: 'Health',
-      busy: '40%',
-    },
-    {
-      icon: 'tshirt',
-      total: '20.000',
-      price: '-$ 4.000',
-      title: 'clothes',
-      busy: '15%',
-    },
-    {
-      icon: 'cloud',
-      total: '60.000',
-      price: '$ 1.000',
-      title: 'Transport',
-      busy: '40%',
-    },
-    {
       icon: 'globe',
       total: '40.000',
       price: '$ 4.000',
       title: 'internet Shoping',
       busy: '80%',
+      id: 0,
     },
     {
       icon: 'shopping-cart',
@@ -248,6 +215,7 @@ export default {
       price: '$ 5.000',
       title: 'products',
       busy: '10%',
+      id: 1,
     },
     {
       icon: 'utensils',
@@ -255,6 +223,7 @@ export default {
       price: '$ 0',
       title: 'Resturants & Cafes',
       busy: '0%',
+      id: 2,
     },
     {
       icon: 'heart',
@@ -262,6 +231,7 @@ export default {
       price: '$ 1.000',
       title: 'Health',
       busy: '40%',
+      id: 3,
     },
     {
       icon: 'tshirt',
@@ -269,6 +239,7 @@ export default {
       price: '-$ 4.000',
       title: 'clothes',
       busy: '15%',
+      id: 4,
     },
     {
       icon: 'cloud',
@@ -276,6 +247,7 @@ export default {
       price: '$ 1.000',
       title: 'Transport',
       busy: '40%',
+      id: 5,
     },
     {
       icon: 'globe',
@@ -283,7 +255,49 @@ export default {
       price: '$ 4.000',
       title: 'internet Shoping',
       busy: '80%',
+      id: 6,
     },
+    {
+      icon: 'shopping-cart',
+      total: '50.000',
+      price: '$ 5.000',
+      title: 'products',
+      busy: '10%',
+      id: 7,
+    },
+    {
+      icon: 'utensils',
+      total: '0',
+      price: '$ 0',
+      title: 'Resturants & Cafes',
+      busy: '0%',
+      id: 8,
+    },
+    {
+      icon: 'heart',
+      total: '70.000',
+      price: '$ 1.000',
+      title: 'Health',
+      busy: '40%',
+      id: 9,
+    },
+    {
+      icon: 'tshirt',
+      total: '20.000',
+      price: '-$ 4.000',
+      title: 'clothes',
+      busy: '15%',
+      id: 10,
+    },
+    {
+      icon: 'cloud',
+      total: '60.000',
+      price: '$ 1.000',
+      title: 'Transport',
+      busy: '40%',
+      id: 11,
+    },
+
   ],
   keyboardValue: [
     {
