@@ -1,19 +1,21 @@
 import React from 'react';
 import { Text, View, Pressable } from 'react-native';
-import ParentStyle from "../../../Styles";
-import styles from "./SwipeoutBtnStyle";
 import Swipeout from 'rc-swipeout';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+import ParentStyle from "../../../Styles";
+import styles from "./SwipeoutBtnStyle";
 import { Color } from "../../../Constants"
+
 const SwipeoutBtn = (props) => {
     const { item } = props.item;
+    
     return (
         <Swipeout
             style={[styles.btnBox]}
             left={[
                 {
                     text: 'Activete',
-                    // onPress: () => console.log('reply'),
                     style: styles.LeftBtn,
                     className: 'custom-class-1'
                 }
@@ -21,16 +23,10 @@ const SwipeoutBtn = (props) => {
             right={[
                 {
                     text: ' Hide',
-                    // onPress: () => console.log('delete'),
                     style: styles.rightBtn,
                     className: 'custom-class-2'
                 }
             ]}
-
-        // onOpen={
-        //     () => console.log('open')
-        // }
-        // onClose={() => console.log('close')}
         >
             <Pressable
                 style={[styles.btnBox, ParentStyle.row]}>

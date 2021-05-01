@@ -5,7 +5,7 @@ import {
   Modal,
   Pressable,
   TextInput,
-  Keyboard
+  Keyboard,
 } from 'react-native';
 
 import styles from './MyModalStyle';
@@ -32,7 +32,6 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
     }
   };
 
-
   useEffect(() => {
     Keyboard.addListener("keyboardDidShow", _keyboardDidShow);
     Keyboard.addListener("keyboardDidHide", _keyboardDidHide);
@@ -42,7 +41,10 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
     };
   }, []);
   const [positionmodal, setpositionmodal] = useState(-20)
-  const _keyboardDidShow = () => setpositionmodal(230)
+  const _keyboardDidShow = (e) => {
+    const { height} = e.endCoordinates //get height keyBoard
+    setpositionmodal(height - 20)
+  }
   const _keyboardDidHide = () => setpositionmodal(-20)
 
 
@@ -93,7 +95,7 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
               <Pressable
                 style={styles.saveChange}
                 onPress={() => {
-                  changeValue(values.total, values.index);
+                  setModalVisible(!showModal);
                 }}>
                 <Text style={[ParentStyle.Text_W_M, ParentStyle.text_center]}>
                   Change

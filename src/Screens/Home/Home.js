@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { View, ScrollView } from 'react-native';
+
 import ParentStyle from '../../Styles/ParentStyle';
 import styles from './HomeStyle';
 import { Header, NavBar, MySlider, Mylist } from '../../Components';
@@ -8,9 +9,7 @@ import { Data } from '../../Constants';
 
 const Home = (props) => {
   const [context, setContext, state, setstate] = useContext(UserContext);
-  const handleScroll = (event) => {
-    setContext(event.nativeEvent.contentOffset.y)
-  }
+
   useEffect(() => {
     if (context <= 30) {
       setstate(true);
@@ -18,6 +17,10 @@ const Home = (props) => {
       setstate(false);
     }
   }, [context])
+  
+  const handleScroll = (event) => {
+    setContext(event.nativeEvent.contentOffset.y)
+  }
 
   return (
     <ScrollView onScroll={handleScroll} style={[ParentStyle.wrp]}>

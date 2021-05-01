@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Text, View, Pressable } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import styles from './NavBarstyle';
 import ParentStyle from '../../../Styles/ParentStyle';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { Color, Theme } from '../../../Constants';
+import { Color} from '../../../Constants';
 
 const NavBar = (props) => {
   const {
@@ -12,8 +13,6 @@ const NavBar = (props) => {
     change,
     showIcon,
     centerTitle,
-    iconName,
-    iconNameRight,
     iconNameLeft,
     route,
     navigation

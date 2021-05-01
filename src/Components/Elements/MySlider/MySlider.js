@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, FlatList } from 'react-native';
+import { Text, View} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
 import styles from "./MySliderStyle";

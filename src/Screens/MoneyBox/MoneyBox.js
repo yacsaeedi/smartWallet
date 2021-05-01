@@ -10,9 +10,7 @@ import { Data, Color } from '../../Constants';
 import { UserContext } from "../../App/Navigator";
 const MoneyBox = (props) => {
     const [context, setContext, state, setstate] = useContext(UserContext);
-    const handleScroll = (event) => {
-        setContext(event.nativeEvent.contentOffset.y)
-    }
+
     useEffect(() => {
         if (context <= 30) {
             setstate(true)
@@ -20,6 +18,10 @@ const MoneyBox = (props) => {
             setstate(false)
         }
     }, [context])
+    
+    const handleScroll = (event) => {
+        setContext(event.nativeEvent.contentOffset.y)
+    }
 
     return (
         <ScrollView

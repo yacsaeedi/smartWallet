@@ -1,10 +1,10 @@
-import React, { useState, useEffect, } from 'react';
-import { TouchableOpacity, Text, View, Image, FlatList, Pressable } from 'react-native';
+import React from 'react';
+import {Text, View,FlatList, Pressable } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import styles from "./StaticListStyle";
 import ParentStyle from "../../../Styles";
-import { Data, Color } from "../../../Constants";
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import { Color } from "../../../Constants";
 
 const StaticList = (props) => {
     const { showDate, list } = props

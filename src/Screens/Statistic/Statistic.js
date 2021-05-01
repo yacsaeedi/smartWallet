@@ -10,11 +10,9 @@ import { Color, Data } from "../../Constants"
 
 import { UserContext } from "../../App/Navigator";
 
-const Statistic = (props) => {
+const Statistic = () => {
     const [context, setContext, state, setstate] = useContext(UserContext);
-    const handleScroll = (event) => {
-        setContext(event.nativeEvent.contentOffset.y)
-    }
+
     useEffect(() => {
         if (context <= 30) {
             setstate(true)
@@ -22,6 +20,10 @@ const Statistic = (props) => {
             setstate(false)
         }
     }, [context])
+
+    const handleScroll = (event) => {
+        setContext(event.nativeEvent.contentOffset.y)
+    }
     return (
         <ScrollView
             onScroll={handleScroll}

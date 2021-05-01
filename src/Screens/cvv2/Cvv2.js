@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
-import { View, ScrollView, Text, Pressable } from 'react-native';
+import React, { useState, useEffect,createContext } from 'react';
+import { View,Text, Pressable } from 'react-native';
+
 import { NavBar } from '../../Components';
 import ParentStyle from '../../Styles';
 import styles from './Cvv2Style';
 import { Card, Keyboard } from './Components';
+
 export const CardInfo = createContext();
+
 const Cvv2 = props => {
   const [titleNav, settitleNav] = useState('Enter Codes');
   const [activeEl, setActiveEl] = useState("");
@@ -14,6 +17,7 @@ const Cvv2 = props => {
     date: '',
     activeInput: '',
   });
+
   useEffect(() => {
     setState((prev) => ({
       ...prev,
@@ -27,6 +31,7 @@ const Cvv2 = props => {
       settitleNav('Enter Cvv2 Code');
     }
   }, [activeEl])
+  
   return (
     <CardInfo.Provider value={[activeEl, setActiveEl]}>
       <View style={[ParentStyle.wrp]}>

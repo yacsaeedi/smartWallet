@@ -14,7 +14,7 @@ import ParentStyle from '../../../Styles';
 import { Color } from '../../../Constants';
 import { MyModal } from "../../../Components"
 import { UserContext } from "../../../App/Navigator"
-const LimitsList = props => {
+const LimitsList = () => {
 
   const [context, setContext, state, setstate, aryLimit, setAryLimit] = useContext(UserContext);
 

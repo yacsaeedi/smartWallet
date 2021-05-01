@@ -8,9 +8,7 @@ import { UserContext } from "../../App/Navigator"
 
 const Limits = (props) => {
     const [context, setContext, state, setstate, aryLimit, setAryLimit] = useContext(UserContext);
-    const handleScroll = (event) => {
-        setContext(event.nativeEvent.contentOffset.y)
-    }
+    
     useEffect(() => {
         if (context <= 30) {
             setstate(true)
@@ -18,6 +16,10 @@ const Limits = (props) => {
             setstate(false)
         }
     }, [context])
+
+    const handleScroll = (event) => {
+        setContext(event.nativeEvent.contentOffset.y)
+    }
 
     return (
         <SafeAreaView style={{ flex: 1 }}>

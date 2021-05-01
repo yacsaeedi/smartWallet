@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { TouchableOpacity, Text, View, Image } from 'react-native';
+import React from 'react';
+import { Text, View, Image } from 'react-native';
+
 import styles from './HeaderStyle';
 import ParentStyle from '../../../Styles/ParentStyle';
-const Header = props => {
+
+const Header = () => {
   return (
     <View style={[styles.HeaderWrp, ParentStyle.between_row]}>
       <View style={styles.infoBox}>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text, View, FlatList, Pressable } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 import { NavBar, SwipeoutBtn } from "../../../Components"
 import ParentStyle from "../../../Styles";
 import styles from "./SwpListStyle";
 import { Color } from "../../../Constants";
-import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const SwpList = (props) => {
     const { navTitle, navnumber, navChange, IconState, list, iconName, navigation } = props

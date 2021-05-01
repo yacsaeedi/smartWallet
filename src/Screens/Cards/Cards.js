@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
 import { View, ScrollView, Text } from 'react-native';
+
 import { NavBar, SwpList } from '../../Components';
 import ParentStyle from '../../Styles';
-import styles from './CardsStyle';
 import { Data } from '../../Constants';
 
 const Cards = (props) => {
