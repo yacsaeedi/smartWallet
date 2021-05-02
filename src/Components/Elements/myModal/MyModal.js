@@ -7,30 +7,43 @@ import {
   TextInput,
   Keyboard,
 } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
+import _ from 'lodash';
 
 import styles from './MyModalStyle';
 import ParentStyle from '../../../Styles';
-import { Data } from '../../../Constants';
-import { UserContext } from "../../../App/Navigator"
+import { UserContext } from "../../../App/Navigator";
 
 const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => {
 
   const [context, setContext, state, setstate, aryLimit, setAryLimit] = useContext(UserContext);
-
+  const [sum, setSum] = useState({
+    value: "",
+    list : []
+  })
+  const [positionmodal, setpositionmodal] = useState(-20)
+  
   const changeValue = (id, num) => {
-    let copylist = [...Data.limitsList];
+    let copylist = _.cloneDeep(aryLimit);
     const finditem = copylist.findIndex(item => {
       return item.id === id;
     });
     if (finditem !== -1) {
       copylist[finditem].total = num;
-      setValues((prv) => ({
-        ...prv,
-        total: copylist[finditem].total
-      }))
-      setAryLimit(copylist);
+      setSum({
+        value : copylist[finditem].total,
+        list : copylist
+      })
     }
   };
+ const saveValue = ()=>{
+      setValues((prv) => ({
+        ...prv,
+        total: sum.value
+      }))
+      setAryLimit(sum.list);
+      setModalVisible(!showModal);
+ }
 
   useEffect(() => {
     Keyboard.addListener("keyboardDidShow", _keyboardDidShow);
@@ -40,14 +53,22 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
       Keyboard.removeListener("keyboardDidHide", _keyboardDidHide);
     };
   }, []);
-  const [positionmodal, setpositionmodal] = useState(-20)
   const _keyboardDidShow = (e) => {
     const { height} = e.endCoordinates //get height keyBoard
     setpositionmodal(height - 20)
   }
   const _keyboardDidHide = () => setpositionmodal(-20)
 
-
+  useFocusEffect(
+    React.useCallback(() => {
+     showModal ?
+     setSum((prv)=>({
+      ...prv,
+      value : values.total,
+    }))
+    : null ;
+    },[showModal,values])
+  );
 
   return (
     <Pressable style={styles.centeredView}>
@@ -58,6 +79,14 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
         statusBarTranslucent={true}>
         <Pressable
           onPress={() => {
+            setValues((prv) => ({
+              ...prv,
+              total: values.total
+            }))
+            setSum(()=>({
+              value : values.total,
+              list : aryLimit
+            }))
             setModalVisible(!showModal);
           }}
           style={styles.centeredView1}>
@@ -89,13 +118,13 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
                 onChangeText={num => {
                   changeValue(values.index, num)
                 }}
-                value={values.total}
+                value={sum.value}
                 onSubmitEditing={Keyboard.dismiss}
               />
               <Pressable
                 style={styles.saveChange}
                 onPress={() => {
-                  setModalVisible(!showModal);
+                  saveValue()
                 }}>
                 <Text style={[ParentStyle.Text_W_M, ParentStyle.text_center]}>
                   Change
@@ -113,6 +142,7 @@ const MyModal = ({ showModal, setModalVisible, values, setValues, setList }) => 
           </View>
         </Pressable>
       </Modal>
+     
     </Pressable>
   );
 };
