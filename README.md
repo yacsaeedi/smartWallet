@@ -1,7 +1,8 @@
+
 ## React Native App smartWallet
 your personal  **smartWallet**
 
-![](./Dosc/9.jpg)
+![]("./Dosc/9.jpg")
 ## Features
 
 -   Add card
@@ -25,3 +26,4 @@ your personal  **smartWallet**
  ### 2. Start your app
 
     yarn android
+
