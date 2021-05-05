@@ -2,7 +2,7 @@
 ## React Native App smartWallet
 your personal  **smartWallet**
 
-![](./Dosc/9.jpg)
+![](./Docs/9.jpg)
 ## Features
 
 -   Add card
