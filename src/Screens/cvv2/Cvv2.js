@@ -34,7 +34,7 @@ const Cvv2 = props => {
   
   return (
     <CardInfo.Provider value={[activeEl, setActiveEl]}>
-      <View style={[ParentStyle.wrp]}>
+      <View style={[ParentStyle.wrp,styles.wrpCvv2]}>
         <NavBar
           textNav={titleNav}
           number="4"
@@ -53,7 +53,7 @@ const Cvv2 = props => {
           }}
         />
         <Pressable
-          style={[styles.saveChange, ParentStyle.marginWrp_H]}
+          style={[styles.saveChange]}
         >
           <Text style={[ParentStyle.Text_W_M, ParentStyle.text_center]}>Continue</Text>
         </Pressable>

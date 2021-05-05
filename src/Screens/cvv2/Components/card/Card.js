@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import {
     View,
-    Text,
-    Pressable,
+    Text
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
@@ -10,29 +9,11 @@ import ParentStyle from '../../../../Styles';
 import styles from './CardStyle';
 import { Color } from '../../../../Constants';
 import { CardInfo } from '../../Cvv2';
-
+import {MaskText} from "../../../../Components"
 
 const Card = ({ card, cvv2, date }) => {
     const [activeEl, setActiveEl] = useContext(CardInfo);
     const [active, setactive] = useState("");
-
-    const MaskText = ({ value, mask, style, char = '_', select }) => {
-        const _renderValue = () => {
-            let replaced = 0;
-            const str = mask
-                .split('')
-                .map(item => {
-                    if (item === char) {
-                        replaced++;
-                        return value[replaced - 1] || item;
-                    }
-                    return item;
-                })
-                .join('');
-            return str;
-        };
-        return <Pressable onPress={() => setactive(select)} ><Text style={style}>{_renderValue()}</Text></Pressable>;
-    };
 
     useEffect(() => {
         setActiveEl(active)
@@ -41,7 +22,7 @@ const Card = ({ card, cvv2, date }) => {
     return (
         <View
             style={[
-                ParentStyle.marginWrp_H,
+                // ParentStyle.marginWrp_H,
                 ParentStyle.paddingWrp_H,
                 styles.cardBox,
             ]}>
@@ -55,17 +36,18 @@ const Card = ({ card, cvv2, date }) => {
                 select="card"
                 mask="_  _  _  _     _  _  _  _     _  _  _  _     _  _  _  _"
                 char="_"
+                setactive={setactive}
             />
             <View style={[ParentStyle.between_row, styles.btnBox]}>
-                <View>
+                <View style={[ParentStyle.center_cloumn]}>
                     <Text style={[ParentStyle.Text_C_R]}>VALID THRUE</Text>
-
                     <MaskText
                         style={[ParentStyle.Text_C_M, styles.cvvInput]}
                         value={date}
                         select="date"
                         mask="_ _ / _ _ "
                         char="_"
+                        setactive={setactive}
                     />
                 </View>
                 <View>
@@ -76,6 +58,7 @@ const Card = ({ card, cvv2, date }) => {
                         mask="_ _ _ "
                         select="cvv2"
                         char="_"
+                        setactive={setactive}
                     />
                 </View>
             </View>

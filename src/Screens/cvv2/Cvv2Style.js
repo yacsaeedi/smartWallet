@@ -24,6 +24,9 @@ const styles = StyleSheet.create({
         marginTop: 180,
         alignSelf: "center"
     },
+    wrpCvv2:{
+        alignItems: 'center',
+    }
 
 })
 export default styles

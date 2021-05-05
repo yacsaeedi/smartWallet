@@ -29,7 +29,7 @@ const SwipeoutBtn = (props) => {
             ]}
         >
             <Pressable
-                style={[styles.btnBox, ParentStyle.row]}>
+                style={[styles.btnBoxWrp, ParentStyle.row]}>
                 <View style={styles.abslBox}></View>
                 <View style={[styles.abslBox, { backgroundColor: Color.blue }]}></View>
                 <View style={[styles.btnBox1, ParentStyle.row]}>
@@ -37,7 +37,7 @@ const SwipeoutBtn = (props) => {
                         <View style={[ParentStyle.center_row, styles.imageBox]}>
                             <Icon name={item.icon} size={17} color={Color.white} style={styles.iconsStyle} />
                         </View>
-                        <View style={[ParentStyle.center_cloumn, styles.imageBox]} >
+                        <View style={styles.imageBox} >
                             <Text style={ParentStyle.Text_W_U}>{item.job}</Text>
                             <Text style={ParentStyle.Text_W_S}>{item.cNumber}</Text>
                         </View>

@@ -28,7 +28,7 @@ const MoneyBox = (props) => {
             onScroll={handleScroll}
             style={ParentStyle.wrp}>
             <NavBar textNav="MoneyBox" change={"headerNav"} showIcon={true} />
-            <View style={[styles.container, ParentStyle.marginWrp_H, ParentStyle.center_cloumn, styles.listMargin]}>
+            <View style={[ParentStyle.marginWrp_H,styles.listMargin]}>
                 <FlatList
                     data={Data.planList}
                     renderItem={({ item, index }) => {

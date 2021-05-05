@@ -6,4 +6,7 @@ export * from './Elements/LimitsList';
 export * from './Elements/StaticList';
 export * from './Elements/Mylist';
 export * from './Elements/SwpList';
-export * from './Elements/myModal'
+export * from './Elements/myModal';
+
+export * from './Common/MaskText';
+

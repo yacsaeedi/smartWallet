@@ -80,7 +80,7 @@ const NavBar = (props) => {
           style={styles.titleBox_nav2}>
           <Icon name={iconNameLeft} size={17} color={Color.white} />
         </Pressable>
-        <View style={(styles.titleBox_nav2, styles.box_size1)}>
+        <View style={[styles.titleBox_nav2, styles.box_size1]}>
           <Text style={[ParentStyle.Text_W_L]}>{textNav}</Text>
         </View>
       </View>

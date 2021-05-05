@@ -5,15 +5,24 @@ const styles = StyleSheet.create({
         backgroundColor: Color.bgBox,
         width: "100%",
         height: 60,
-        borderRadius: 11,
+        borderRadius: 8,
         marginBottom: 8,
-        position: "relative"
+        position: "relative",
+        overflow: 'hidden',
+    },
+    btnBoxWrp:{
+        backgroundColor: Color.bgBox,
+        width: "100%",
+        height: 60,
+        borderRadius: 8,
+        marginBottom: 8,
+        position: "relative",
     },
     btnBox1: {
         backgroundColor: Color.bgBox,
         width: "100%",
         height: "100%",
-        borderRadius: 11,
+        borderRadius: 8,
         position: "absolute",
         zIndex: 10000,
 
@@ -36,7 +45,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         alignItems: "center",
         justifyContent: "center",
-        width: "50%",
+        alignSelf: "center",
         marginBottom: 8,
         fontFamily: Theme.Fonts.medium,
         fontSize: 14
@@ -50,7 +59,7 @@ const styles = StyleSheet.create({
         marginRight: 12
     },
     imageBox: {
-
+justifyContent: "center"
     },
     rightContent: {
         flex: 1,
@@ -67,7 +76,7 @@ const styles = StyleSheet.create({
     abslBox: {
         backgroundColor: Color.lightGreen,
         width: "50%",
-        height: "100%"
+        height: "100%",
     }
 })
 export default styles

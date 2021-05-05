@@ -22,7 +22,7 @@ const Mylist = (props) => {
                             <View style={[styles.iconbox]} >
                                 <Icon name={item.icon} size={10} color={Color.white} />
                             </View>
-                            <View style={[ParentStyle.center_cloumn]}>
+                            <View>
                                 <Text style={[ParentStyle.Text_W_M]}>{item.title}</Text>
                                 {showDate ?
                                     <Text style={[ParentStyle.Text_C_R]}>{item.date}</Text>

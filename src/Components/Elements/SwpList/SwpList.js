@@ -17,7 +17,7 @@ const SwpList = (props) => {
                     data={list}
                     renderItem={(item) => {
                         return (
-                            <SwipeoutBtn item={item} iconName={item.icon} />
+                            <SwipeoutBtn item={item} iconName={item.icon} /> 
                         )
                     }}
                     ListFooterComponent={() => {

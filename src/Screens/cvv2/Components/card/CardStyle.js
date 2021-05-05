@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { Color } from '../../../../Constants';
 const styles = StyleSheet.create({
     cardBox: {
-        width: 355,
+        width:"90%",
         height: 190,
         backgroundColor: Color.bgBox,
         borderRadius: 12,

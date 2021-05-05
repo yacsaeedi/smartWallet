@@ -25,7 +25,7 @@ const ParentStyle = StyleSheet.create({
   },
   center_cloumn: {
     justifyContent: 'center',
-    alignContent: 'center',
+    alignItems: 'center',
     flexDirection: 'column',
   },
   between_cloumn: {
